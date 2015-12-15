@@ -37,70 +37,53 @@
 		margin-top: 2px;
 		height: 32px;
 		border-radius: 4px;
-		a.one{
+		padding-left: 10%;
+		.one{
 			text-align: center;
 			background: url('../images/menu-steps.png') no-repeat;
 			background-size: 35px, auto;
 			height: 30px;
-			display: inline-block;
-			width: 25%;	
+			float: left;
+			width: 5%;	
 			background-position: 0px 0px;
-			
-			.icons{
-				display: inline-block;
-				color: #a08855;
-				line-height: 32px;
-				width: 100%;
-				text-align: center;
-			}
 		}
-		a.two{
+		.icons{
+			float: left;
+			color: #a08855;
+			line-height: 32px;
+			height: 32px;
+			width: 20%;
+			text-align: left;
+		}
+		.two{
 			text-align: center;
 			background: url('../images/menu-steps.png') no-repeat;
 			background-size: 35px, auto;
 			height: 30px;
-			display: inline-block;
-			width: 25%;	
+			float: left;
+			width: 5%;	
 			background-position: 0px -30px;
-			.icons{
-				display: inline-block;
-				color: #a08855;
-				line-height: 32px;
-				width: 100%;
-				text-align: center;
-			}
 		}
-		a.three{
+
+		
+		.three{
 			text-align: center;
 			background: url('../images/menu-steps.png') no-repeat;
 			background-size: 35px, auto;
 			height: 30px;
-			display: inline-block;
-			width: 25%;	
+			float: left;
+			width: 5%;	
 			background-position: 0px -60px;
-			.icons{
-				display: inline-block;
-				color: #a08855;
-				line-height: 32px;
-				width: 100%;
-				text-align: center;
-			}
 		}
-		a.four{
+
+		.four{
 			text-align: center;
 			background: url('../images/menu-steps.png') no-repeat;
 			background-size: 35px, auto;
 			height: 30px;
-			display: inline-block;
-			width: 25%;	
+			float: left;
+			width: 5%;	
 			background-position: 0px -90px;
-			.icons{
-				display: inline-block;
-				color: #a08855;
-				line-height: 32px;
-				width: 100%;
-				text-align: center;
-			}
 		}
 	}
 
