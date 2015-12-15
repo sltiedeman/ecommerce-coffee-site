@@ -1,50 +1,76 @@
 extends layout
 
 block content
-	//- if (!user)
-	//- 	a(href="/login") Login
-	//- 	br
-	//- 	a(href="/register") Register
-	//- if (user)
-	//- 	p Congrats!  You are logged in as #{user.username}
-	//- 	a(href="/logout") Logout
-	.navigation-bar
-		.navigation-bar-left
-			img(src='./images/dc_roasters_200x124_lt.png')
-		.navigation-bar-right
-			button.btn.btn-primary(type="submit") Login
-	.navigation-bar-small
-		.icon-holder
-			.one
-			.icons 1. Welcome
-			.two
-			.icons 2. Options
-			.three
-			.icons 3. Delivery
-			.four
-			.icons 4. Payment
-	.coffee-cup-background
-		#coffee-cup-text
-			h1 A better way to grind
-			h4 Freshly roaster coffee beans delivered 
-			h4 weekly to your door.
-	.we-source-coffee
-		.spacer
-		.we-source-coffee-text
-			h3 We source coffee beans around the World and roast them fresh daily
-			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus tortor ac purus fringilla laoreet. Quisque viverra augue in sapien cursus placerat. Aliquam eu mi sollicitudin, bibendum lacus vitae, sodales mauris. Curabitur posuere non odio ac commodo. Nunc imperdiet, ipsum eget pharetra volutpat, felis felis luctus odio, nec scelerisque elit magna id justo. Donec in sapien maximus, tristique nunc eget, fermentum nisl. Donec bibendum luctus ante quis pulvinar. Morbi eget lectus nec elit molestie viverra vitae a purus. Phasellus ultricies metus lacus, in dapibus augue vehicula id. Aenean varius dictum velit et consectetur. Suspendisse blandit elit et vulputate consectetur.
+    //- if (!user)
+    //-     a(href="/login") Login
+    //-     br
+    //-     a(href="/register") Register
+    //- if (user)
+    //-     p Congrats!  You are logged in as #{user.username}
+    //-     a(href="/logout") Logout
+    .navigation-bar
+        .navigation-bar-left
+            img(src='./images/dc_roasters_200x124_lt.png')
+        .navigation-bar-right
+            if (!user)
+                a(href="/register")
+                    button.btn.btn-primary(type="submit") Login
+                a(href="/login")    
+                    button.btn.btn-primary(type="submit") Register
+            if (user)
+                p Welcome 
+                    a(href="/account") #{user.username}
+                a(href="/logout") 
+                    button.btn.btn-danger(type="submit") Logout
 
-			Fusce magna mi, tempor sit amet pellentesque nec, tempus vitae turpis. Suspendisse dictum dui auctor ornare bibendum. Cras ornare sollicitudin maximus. Donec fringilla libero purus. Duis elementum tempor arcu id eleifend. In sollicitudin interdum nunc. Mauris at pellentesque diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit, est quis mollis lacinia, mauris nisl placerat libero, at porta mi lorem nec massa. Sed tincidunt dui urna, non malesuada dolor varius eget. Sed pretium dolor in gravida vehicula.
-	.how-it-works 
-		p how it works
-	.arrow-holder
-		.arrow-down
-	.coffee-bags
-		p.title 1. We get the coffee
-		p Lorem ipsum is simply
-		p Lorem ipsum is simply
-		p Lorem ipsum is simply
+    .navigation-bar-small
+        .icon-holder
+            .one
+            .icons 1. Welcome
+            .two
+            .icons 2. Options
+            .three
+            .icons 3. Delivery
+            .four
+            .icons 4. Payment
+    .coffee-cup-background
+        .coffee-cup-text
+            h1 A better way to grind
+            h4 Freshly roaster coffee beans delivered 
+            h4 weekly to your door.
+    .we-source-coffee
+        .spacer
+        .we-source-coffee-text
+            h3 We source coffee beans around the World and roast them fresh daily
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus tortor ac purus fringilla laoreet. Quisque viverra augue in sapien cursus placerat. Aliquam eu mi sollicitudin, bibendum lacus vitae, sodales mauris. Curabitur posuere non odio ac commodo. Nunc imperdiet, ipsum eget pharetra volutpat, felis felis luctus odio, nec scelerisque elit magna id justo. Donec in sapien maximus, tristique nunc eget, fermentum nisl. Donec bibendum luctus ante quis pulvinar. Morbi eget lectus nec elit molestie viverra vitae a purus. Phasellus ultricies metus lacus, in dapibus augue vehicula id. Aenean varius dictum velit et consectetur. Suspendisse blandit elit et vulputate consectetur.
+
+            Fusce magna mi, tempor sit amet pellentesque nec, tempus vitae turpis. Suspendisse dictum dui auctor ornare bibendum. Cras ornare sollicitudin maximus. Donec fringilla libero purus. Duis elementum tempor arcu id eleifend. In sollicitudin interdum nunc. Mauris at pellentesque diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit, est quis mollis lacinia, mauris nisl placerat libero, at porta mi lorem nec massa. Sed tincidunt dui urna, non malesuada dolor varius eget. Sed pretium dolor in gravida vehicula.
+    .how-it-works 
+        p how it works
+    .arrow-holder
+        .arrow-down
+    .coffee-bags
+        p.title 1. We get the coffee
+        p Lorem ipsum is simply
+        p Lorem ipsum is simply
+        p Lorem ipsum is simply
+    .how-it-works2
+        .rotated-picture
+            img(src="../images/grower.jpg")
+        .coffee-grower
+            p.title 2. We pick up the coffee
+            p.text Lorem ipsum is simply
+            p.text Lorem ipsum is simply
+            p.text Lorem ipsum is simply
+    .how-it-works3
+        .coffee-cup
+            p.title 3. You drink the coffee
+            p.text Lorem ipsum is simply
+            p.text Lorem ipsum is simply
+            p.text Lorem ipsum is simply
+        .coffee-cup-image
+            img(src="../images/cupSteam.jpg")
 
 
 
-		
+        

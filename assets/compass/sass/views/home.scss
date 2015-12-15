@@ -20,6 +20,15 @@
 			height: 40px;
 			width: 80px;
 		}
+		p{
+			margin-top: 30px;
+			color: white;
+			margin-right: 20px;
+			display: inline-block;
+		}
+		.btn-danger{
+			margin-top: 0px;
+		}
 	}
 
 }
@@ -96,7 +105,7 @@
 	background-size: 100%;
 	background-repeat: no-repeat;
 	color: white;
-	#coffee-cup-text{
+	.coffee-cup-text{
 		padding-top: 80px;
 		padding-left: 75px;
 	}
@@ -152,7 +161,7 @@
 .coffee-bags{
 	height: 300px;
 	background-image: url('../images/CoffeeBags.jpg');
-	background-repeat: no-repeat;
+	background-repeat: cover;
 	background-size: 100%;
 	// position: relative;
 	.title{
@@ -188,3 +197,54 @@
 // 	content: " ";
 // }
 
+.how-it-works2{
+	height: 400px;
+	background-color: #edebe6;
+	.rotated-picture{
+		margin-left: 50px;
+		padding-top: 75px;
+		transform: rotate(-10deg);
+		float: left;
+		img{
+			height: 250px;
+			border: 10px solid white;
+		}
+	}
+	.coffee-grower{
+		float: left;
+		padding-top: 75px;
+		margin-left: 5%;
+		color: #3a2f27;
+		p.title{
+			font-size: 40px;
+		}
+		p.text{
+			padding-left: 50px;
+		}
+	}
+	
+}
+
+.how-it-works3{
+	clear: both;
+	height: 400px;
+	background-color: black;
+	padding-left: 75px;
+	.coffee-cup{
+		float: left;
+		width: 40%;
+		padding-top: 75px;
+		color: white;
+		p.title{
+			font-size: 40px;
+		}
+		p.text{
+			padding-left: 50px;
+		}
+	}
+	.coffee-cup-image{
+		float: left;
+		width: 60%;
+	}
+
+}

@@ -3,19 +3,18 @@ var passport = require('passport');
 var Account = require('../models/account');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+//////////////////HOME PAGE GET/////////////////////
+router.get('/', function(req, res, next){
+	res.render('index', {user: req.user});
+})
 
+///////////////////REGISTER GET/////////////////////
 router.get('/register', function(req, res, next){
-	res.render('index');
+	res.render('register');
 });
 
-router.get('/login', function(req, res, next){
-	res.render('login');
-});
 
+//////////////////REGISTER POST/////////////////////
 router.post('/register', function(req,res,next){
 	Account.register(new Account({
 		username: req.body.username
@@ -32,5 +31,15 @@ router.post('/register', function(req,res,next){
 		}
 	});
 });
+
+router.get('/login', function(req, res, next){
+	res.render('login');
+});
+
+router.post('/login', passport.authenticate('local'), function(req, res){
+	res.redirect('/');
+});
+
+
 
 module.exports = router;
