@@ -14,12 +14,12 @@ block content
         .navigation-bar-right
             if (!user)
                 a(href="/register")
-                    button.btn.btn-primary(type="submit") Login
+                    button.btn.btn-success(type="submit") Login
                 a(href="/login")    
                     button.btn.btn-primary(type="submit") Register
             if (user)
-                p Welcome 
-                    a(href="/account") #{user.username}
+                p Welcome, 
+                    a(href="/account") #{user.username}!
                 a(href="/logout") 
                     button.btn.btn-danger(type="submit") Logout
 
@@ -70,7 +70,7 @@ block content
             p.text Lorem ipsum is simply
         .coffee-cup-image
             img(src="../images/cupSteam.jpg")
+    .get-started-section
+        button.get-started(type="submit") Get Started
 
-
-
-        
+extends footer

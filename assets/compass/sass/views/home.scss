@@ -1,6 +1,6 @@
 .navigation-bar{
 	height: 80px;
-	background-color: #3a2f27;
+	background-color: $brown_dk;
 	.navigation-bar-left{
 		float: left;
 		width: 50%;
@@ -14,9 +14,13 @@
 		float: left;
 		width: 50%;
 		text-align: right;
+		a{
+			text-decoration: none;
+			color: white;
+		}
 		button{
 			margin-top: 20px;
-			margin-right: 100px;
+			margin-right: 40px;
 			height: 40px;
 			width: 80px;
 		}
@@ -36,13 +40,13 @@
 .navigation-bar-small{
 	clear: all;
 	height: 40px;
-	background-color: #3a2f27;
-	border-top: 2px solid #a08855;
-	border-bottom: 2px solid #a08855;
+	background-color: $brown_dk;
+	border-top: 2px solid $brown_lt;
+	border-bottom: 2px solid $brown_lt;
 	padding-left: 10%;
 	padding-right: 10%;
 	.icon-holder{
-		background-color: #6d5219;
+		background-color: $brown_md;
 		margin-top: 2px;
 		height: 32px;
 		border-radius: 4px;
@@ -58,7 +62,7 @@
 		}
 		.icons{
 			float: left;
-			color: #a08855;
+			color: $brown_lt;
 			line-height: 32px;
 			height: 32px;
 			width: 20%;
@@ -112,11 +116,11 @@
 }
 
 .we-source-coffee{
-	background-color: #edebe6;
+	background-color: $cream;
 	.spacer{
-		height: 20px;
+		height: 40px;
 		width: 100%;
-		background-color: #edebe6;
+		background-color: $cream;
 	}
 	.we-source-coffee-text{
 		h3{
@@ -130,11 +134,11 @@
 }
 
 .how-it-works{
-	background-color: #edebe6;
+	background-color: $cream;
 	height: 100px;
 	line-height: 100px;
 	font-size: 40px;
-	color: #196d46;
+	color: $green_lt;
 	text-align: center;
 	p{
 		text-transform: uppercase;
@@ -148,7 +152,7 @@
 		height: 0;
 		border-left: 30px solid transparent;
 		border-right: 30px solid transparent;
-		border-top: 30px solid #edebe6;
+		border-top: 30px solid $cream;
 		position: absolute;
 		margin-left: 50%;
 		left: -30px;
@@ -159,10 +163,9 @@
 
 
 .coffee-bags{
-	height: 300px;
+	height: 400px;
 	background-image: url('../images/CoffeeBags.jpg');
-	background-repeat: cover;
-	background-size: 100%;
+	background-size: cover;
 	// position: relative;
 	.title{
 		padding-top: 75px;
@@ -199,7 +202,7 @@
 
 .how-it-works2{
 	height: 400px;
-	background-color: #edebe6;
+	background-color: $cream;
 	.rotated-picture{
 		margin-left: 50px;
 		padding-top: 75px;
@@ -214,7 +217,7 @@
 		float: left;
 		padding-top: 75px;
 		margin-left: 5%;
-		color: #3a2f27;
+		color: $brown_dk;
 		p.title{
 			font-size: 40px;
 		}
@@ -247,4 +250,18 @@
 		width: 60%;
 	}
 
+}
+
+.get-started-section{
+	height: 200px;
+	background-color: $cream;
+	text-align: center;
+	button.get-started{
+		background-color: $green_lt;
+		height: 60px;
+		width: 200px;
+		margin-top: 70px;
+		color: white;
+		font-size: 24px;
+	}
 }

@@ -1,0 +1,31 @@
+.footer-wrapper{
+	background-color: #3a2f27;
+	text-align: center;
+	padding-bottom: 25px;
+	img{
+		margin-top: 25px;
+	}
+	.dc-links{
+		margin-top: 10px;
+		.link{
+			color: $cream;
+			padding: 25px;
+		}
+	}
+	.horizontal-rule{
+		margin: 15px 0px 15px 25%;
+		height: 2px;
+		background-color: $brown-md;
+		width: 50%;
+	}
+	p{
+		color: $cream;
+	}
+	.tiny-text{
+		p{
+			color: $brown-md;
+		}
+		font-size: 10px;
+		color: $brown-md;
+	}
+}
