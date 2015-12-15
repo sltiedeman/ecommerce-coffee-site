@@ -1,0 +1,9 @@
+/* line 1, ../../../assets/compass/sass/views/register.scss */
+.register-wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* line 4, ../../../assets/compass/sass/views/register.scss */
+.register-wrapper .container form {
+  margin: auto;
+}

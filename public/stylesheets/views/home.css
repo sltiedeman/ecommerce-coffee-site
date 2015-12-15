@@ -5,11 +5,11 @@ Error: Undefined variable: "$brown_dk".
 1: .navigation-bar{
 2: 	height: 80px;
 3: 	background-color: $brown_dk;
-4: 	.navigation-bar-left{
-5: 		float: left;
-6: 		width: 50%;
-7: 		img{
-8: 			margin-left: 100px;
+4: 	position: fixed;
+5: 	top: 0;
+6: 	z-index: 100;
+7: 	width: 100%;
+8: 	.navigation-bar-left{
 
 Backtrace:
 /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss:3
@@ -64,4 +64,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$brown_dk\".\A         on line 3 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 1: .navigation-bar{\A 2: 	height: 80px;\A 3: 	background-color: $brown_dk;\A 4: 	.navigation-bar-left{\A 5: 		float: left;\A 6: 		width: 50%;\A 7: 		img{\A 8: 			margin-left: 100px;"; }
+  content: "Error: Undefined variable: \"$brown_dk\".\A         on line 3 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 1: .navigation-bar{\A 2: 	height: 80px;\A 3: 	background-color: $brown_dk;\A 4: 	position: fixed;\A 5: 	top: 0;\A 6: 	z-index: 100;\A 7: 	width: 100%;\A 8: 	.navigation-bar-left{"; }

@@ -13,9 +13,9 @@ block content
             img(src='./images/dc_roasters_200x124_lt.png')
         .navigation-bar-right
             if (!user)
-                a(href="/register")
+                a(href="/login")
                     button.btn.btn-success(type="submit") Login
-                a(href="/login")    
+                a(href="/register")    
                     button.btn.btn-primary(type="submit") Register
             if (user)
                 p Welcome, 
@@ -55,6 +55,8 @@ block content
         p Lorem ipsum is simply
         p Lorem ipsum is simply
     .how-it-works2
+        .bag-arrow
+            img(src="../images/CoffeeBags_corner.png")
         .rotated-picture
             img(src="../images/grower.jpg")
         .coffee-grower
@@ -62,6 +64,8 @@ block content
             p.text Lorem ipsum is simply
             p.text Lorem ipsum is simply
             p.text Lorem ipsum is simply
+    .arrow-holder
+        .arrow-down
     .how-it-works3
         .coffee-cup
             p.title 3. You drink the coffee
@@ -70,6 +74,8 @@ block content
             p.text Lorem ipsum is simply
         .coffee-cup-image
             img(src="../images/cupSteam.jpg")
+    .arrow-holder2
+        .arrow-down2
     .get-started-section
         button.get-started(type="submit") Get Started
 
