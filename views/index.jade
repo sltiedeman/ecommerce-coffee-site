@@ -15,10 +15,14 @@ block content
 			button.btn.btn-primary(type="submit") Login
 	.navigation-bar-small
 		.icon-holder
-			p.icons 1. Welcome
-			p.icons 2. Options	
-			p.icons 3. Delivery
-			p.icons 4. Payment
+			a.one(href='/welcome')
+				.icons 1. Welcome
+			a.two(href='/welcome')
+				.icons 2. Options
+			a.three(href='/welcome')
+				.icons 3. Delivery
+			a.four(href='/welcome')
+				.icons 4. Payment
 	.coffee-cup-background
 		#coffee-cup-text
 			h1 A better way to grind
@@ -34,7 +38,7 @@ block content
 	.how-it-works 
 		p how it works
 	.arrow-holder
-	.arrow-down
+		.arrow-down
 	.coffee-bags
 		p.title 1. We get the coffee
 		p Lorem ipsum is simply
