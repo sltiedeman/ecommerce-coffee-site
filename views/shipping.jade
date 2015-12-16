@@ -1,0 +1,111 @@
+extends layout
+
+block content
+
+ .navigation-bar
+    .navigation-bar-left
+        img(src='./images/dc_roasters_200x124_lt.png')
+    .navigation-bar-right
+        if (!user)
+            a(href="/login")
+                button.btn.btn-success(type="submit") Login
+            a(href="/register")    
+                button.btn.btn-primary(type="submit") Register
+        if (user)
+            p Welcome, 
+                a(href="/account") #{username}!
+            a(href="/logout") 
+                button.btn.btn-danger(type="submit") Logout
+  .navigation-bar-small
+        .icon-holder
+            .one
+            .icons 1. Welcome
+            .two.active
+            .icons.active 2. Options
+            .three
+            .icons 3. Delivery
+            .four
+            .icons 4. Payment
+
+ #shipping.container
+    #shipping-wrapper
+        #shipping-header Please enter your shipping info
+        #shipping-sub-header We treat your coffee like gold.  Like black gold (not Texas tea). It will be shipped safely and is guaranteed.
+        .shipping-block.col-sm-12
+            form.col-sm-6(name="shipping-form", action="/shipping", method="post")
+                h2.shipping-label Address        
+                .form-group
+                    label(for="fullName") Full Name
+                    input.form-control(type="text", id="fullName" name="fullName", placeholder="Full Name")
+                .form-group
+                    label(for="address1") Address Line 1
+                    input.form-control(type="text", id="address1" name="address1", placeholder="Address Line 1")
+                    p.help-block Street address, P.O. Box, company name, c/o
+                .form-group
+                    label(for="address2") Address Line 2
+                    input.form-control(type="text", id="address2" name="address2", placeholder="Address Line 2")
+                    p.help-block Apartment, suite, unit, building, floor, etc.
+                .form-group
+                    label(for="city") City
+                    input.form-control(type="text", id="city" name="city", placeholder="City")
+                    p.help-block City, town, etc.
+                label(for="state") State
+                .form-group               
+                    select.form-control(id="state", name="state", style="width:100px")
+                        option(value='AL') Alabama
+                        option(value='AK') Alaska
+                        option(value='AZ') Arizona
+                        option(value='AR') Arkansas
+                        option(value='CA') California
+                        option(value='CO') Colorado
+                        option(value='CT') Connecticut
+                        option(value='DE') Delaware
+                        option(value='DC') District Of Columbia
+                        option(value='FL') Florida
+                        option(value='GA') Georgia
+                        option(value='HI') Hawaii
+                        option(value='ID') Idaho
+                        option(value='IL') Illinois
+                        option(value='IN') Indiana
+                        option(value='IA') Iowa
+                        option(value='KS') Kansas
+                        option(value='KY') Kentucky
+                        option(value='LA') Louisiana
+                        option(value='ME') Maine
+                        option(value='MD') Maryland
+                        option(value='MA') Massachusetts
+                        option(value='MI') Michigan
+                        option(value='MN') Minnesota
+                        option(value='MS') Mississippi
+                        option(value='MO') Missouri
+                        option(value='MT') Montana
+                        option(value='NE') Nebraska
+                        option(value='NV') Nevada
+                        option(value='NH') New Hampshire
+                        option(value='NJ') New Jersey
+                        option(value='NM') New Mexico
+                        option(value='NY') New York
+                        option(value='NC') North Carolina
+                        option(value='ND') North Dakota
+                        option(value='OH') Ohio
+                        option(value='OK') Oklahoma
+                        option(value='OR') Oregon
+                        option(value='PA') Pennsylvania
+                        option(value='RI') Rhode Island
+                        option(value='SC') South Carolina
+                        option(value='SD') South Dakota
+                        option(value='TN') Tennessee
+                        option(value='TX') Texas
+                        option(value='UT') Utah
+                        option(value='VT') Vermont
+                        option(value='VA') Virginia
+                        option(value='WA') Washington
+                        option(value='WV') West Virginia
+                        option(value='WI') Wisconsin
+                        option(value='WY') Wyoming
+                .form-group
+                    label(for="fullName") Zip Code
+                    input.form-control(type="text", id="zipcode" name="zipcode", placeholder="Zip Code", style="width:100px", minlength=5)
+
+
+extends footer

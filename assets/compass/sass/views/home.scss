@@ -73,9 +73,30 @@
 			width: 20%;
 			text-align: left;
 		}
+		.icons.active{
+			color: white;
+		}
+		.one.active{
+			background: url('../images/menu-steps-active.png') no-repeat;
+			text-align: center;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px 0px;
+		}
 		.two{
 			text-align: center;
 			background: url('../images/menu-steps.png') no-repeat;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px -30px;
+		}
+		.two.active{
+			background: url('../images/menu-steps-active.png') no-repeat;
+			text-align: center;
 			background-size: 35px, auto;
 			height: 30px;
 			float: left;

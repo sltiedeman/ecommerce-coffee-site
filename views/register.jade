@@ -12,7 +12,7 @@ block content
                 button.btn.btn-primary(type="submit") Register
         if (user)
             p Welcome, 
-                a(href="/account") #{user.username}!
+                a(href="/account") #{username}!
             a(href="/logout") 
                 button.btn.btn-danger(type="submit") Logout
 
@@ -20,6 +20,9 @@ block content
   .register-wrapper
      .container
        h1 Registration
+       if (err)
+        p.error
+          |#{err.message}
        p.lead Pick a username and password
        br
        form(role='form', action="/register",method="post", style='max-width: 300px;')

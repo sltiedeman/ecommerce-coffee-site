@@ -1,0 +1,26 @@
+#shipping{
+	margin-bottom: 60px;
+	#shipping-wrapper{
+		margin-top: 60px;
+		#shipping-header{
+			margin: 0 0 8px;
+			font-size: 32px;
+			line-height: 1.2;
+			text-align: left;
+		}
+		#shipping-sub-header{
+			margin: 0;
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 1.4;
+			text-align: left;
+		}
+	}
+}
+
+.shipping-block{
+	border: 1px solid darken($cream, 10%);
+	border-radius: 5px;
+	margin: 30px auto;
+	padding: 30px;
+}

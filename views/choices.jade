@@ -1,0 +1,80 @@
+extends layout
+
+block content
+
+    .navigation-bar
+        .navigation-bar-left
+            img(src='./images/dc_roasters_200x124_lt.png')
+        .navigation-bar-right
+            if (!username)
+                a(href="/login")
+                    button.btn.btn-success(type="submit") Login
+                a(href="/register")    
+                    button.btn.btn-primary(type="submit") Register
+            if (username)
+                p Welcome, 
+                    a(href="/account") #{username}!
+                a(href="/logout") 
+                    button.btn.btn-danger(type="submit") Logout
+    .navigation-bar-small
+        .icon-holder
+            .one
+            .icons 1. Welcome
+            .two.active
+            .icons.active 2. Options
+            .three
+            .icons 3. Delivery
+            .four
+            .icons 4. Payment
+
+    #choices.container
+        #plan-wrapper
+            #choices-header Tell us what you want!!
+            #choices-sub-header Shipping is free and you can skip any week
+            form(name="choices-form", action="/choices", method="post")
+                #choices-frequency.choices-block
+                    .row
+                        .choices-image.col-sm-6
+                            img(src='../images/calendar.png')
+                        .col-sm-6
+                            h2.choices-label 1. Frequency
+                            .choices-lower-text-wrapper 
+                                .choices-lower-text How often would you like us to send you your coffee?
+                                select(id="frequency", name="frequency", class="form-control",selected="#{frequency}")
+                                    option(value="weekly" selected=(frequency == "weekly")) Weekly
+                                    option(value="biweekly" selected=(frequency == "biweekly")) Every Two Weeks
+                                    option(value="monthly" selected=(frequency == "monthly")) Monthly
+                                    option(value="quarterly" selected=(frequency == "quarterly")) Quarterly
+                                    option(value="semiannually" selected=(frequency == "semiannually")) Semi-Annually
+                                    option(value="annually" selected=(frequency == "annually")) Annually
+                                .choices-help-text You can cancel anytime. You can skip anytime;
+                #choices-quantity.choices-block
+                    .row
+                        .choices-image.col-sm-6
+                            img(src='../images/food-scale.png')
+                        .col-sm-6
+                            h2.choices-label 2. Quantity
+                            .choices-lower-text-wrapper
+                                .choices-lower-text How many pounds (in increments of .25lb) would you like each delivery?
+                                    input(type="number", name="quarterPounds", placeholder="#{quarterPounds}", step=.25, min=0)
+                                    .choices-help-text You can cancel anytime. You can skip anytime;
+                #choices-grind.choices-block
+                    .row
+                        .choices-image.col-sm-6
+                            img(src='../images/beans.png')
+                        .col-sm-6
+                            h2.choices-label 3. Grind Type
+                            .choices-lower-text-wrapper 
+                                .choices-lower-text How do you like your grinds?
+                                select(id="grind", name="grind", class="form-control")
+                                    option(value="extraCoarse" selected=(grind ==' extraCoarse')) Extra Coarse
+                                    option(value="coarse" selected=(grind == 'coarse')) Coarse
+                                    option(value="mediumCoarse" selected=(grind == 'mediumCoarse')) Medium Coarse
+                                    option(value="fine" selected=(grind == 'fine')) Fine
+                                    option(value="veryFine" selected=(grind == 'veryFine')) Very Fine
+                                    
+                                .choices-help-text You can cancel anytime. You can skip anytime;
+                #button-holder
+                     input.btn.btn-primary.btn-lg(type="submit", name="submit")
+
+extends footer
