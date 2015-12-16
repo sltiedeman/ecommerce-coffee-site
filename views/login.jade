@@ -1,15 +1,31 @@
 extends layout
 
 block content
-	.container
-		h1 Login Page
-		p.lead Please enter your username and password below.
-		br
-		form#login-form(role='form', action='/login', method='post')
-			.form-group
-				input.form-control(type="text", name="username", placeholder="Enter Your Username")
-			.form-group
-				input.form-control(type="password", name="password", placeholder="Enter your Password")
-			button.btn.btn-primary(type='submit') Submit 
-			a(href='/')
-				button.btn.btn-primary(type='button') Cancel
+    .navigation-bar
+        .navigation-bar-left
+            img(src='./images/dc_roasters_200x124_lt.png')
+        .navigation-bar-right
+            if (!user)
+                a(href="/login")
+                    button.btn.btn-success(type="submit") Login
+                a(href="/register")    
+                    button.btn.btn-primary(type="submit") Register
+            if (user)
+                p Welcome, 
+                    a(href="/account") #{user.username}!
+                a(href="/logout") 
+                    button.btn.btn-danger(type="submit") Logout
+    .login-wrapper
+        .container
+            h1 Login Page
+            p.lead Please enter your username and password below.
+            br
+            form(role='form', action='/login', method='post', style="max-width: 300px;")
+                .form-group
+                    input.form-control(type="text", name="username", placeholder="Enter Your Username")
+                .form-group
+                    input.form-control(type="password", name="password", placeholder="Enter Your Password")
+                button.btn.btn-success(type='submit') Submit 
+                a(href='/')
+                    button.btn.btn-primary(type="button") Cancel
+extends footer

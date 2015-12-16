@@ -1,3 +1,20 @@
+/* line 1, ../../assets/compass/sass/views/login.scss */
+.login-wrapper {
+  padding-top: 100px;
+  text-align: center;
+  padding-bottom: 40px;
+  background-color: #edebe6;
+}
+/* line 6, ../../assets/compass/sass/views/login.scss */
+.login-wrapper .container form {
+  margin: auto;
+}
+/* line 8, ../../assets/compass/sass/views/login.scss */
+.login-wrapper .container form button {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
 /* line 1, ../../assets/compass/sass/views/home.scss */
 .navigation-bar {
   height: 80px;
@@ -344,10 +361,17 @@
 
 /* line 1, ../../assets/compass/sass/views/register.scss */
 .register-wrapper {
+  padding-top: 100px;
   text-align: center;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
+  background-color: #edebe6;
 }
-/* line 4, ../../assets/compass/sass/views/register.scss */
+/* line 6, ../../assets/compass/sass/views/register.scss */
 .register-wrapper .container form {
   margin: auto;
+}
+/* line 8, ../../assets/compass/sass/views/register.scss */
+.register-wrapper .container form button {
+  margin-right: 5px;
+  margin-left: 5px;
 }

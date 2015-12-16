@@ -1,13 +1,6 @@
 extends layout
-
 block content
-    //- if (!user)
-    //-     a(href="/login") Login
-    //-     br
-    //-     a(href="/register") Register
-    //- if (user)
-    //-     p Congrats!  You are logged in as #{user.username}
-    //-     a(href="/logout") Logout
+
     .navigation-bar
         .navigation-bar-left
             img(src='./images/dc_roasters_200x124_lt.png')
@@ -22,7 +15,6 @@ block content
                     a(href="/account") #{user.username}!
                 a(href="/logout") 
                     button.btn.btn-danger(type="submit") Logout
-
     .navigation-bar-small
         .icon-holder
             .one
@@ -78,5 +70,4 @@ block content
         .arrow-down2
     .get-started-section
         button.get-started(type="submit") Get Started
-
 extends footer
