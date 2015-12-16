@@ -18,14 +18,18 @@ block content
                     button.btn.btn-danger(type="submit") Logout
     .navigation-bar-small
         .icon-holder
-            .one
-            .icons 1. Welcome
-            .two.active
-            .icons.active 2. Options
-            .three
-            .icons 3. Delivery
-            .four
-            .icons 4. Payment
+            a(href="/")
+                .one
+                .icons 1. Welcome
+            a(href="/choices")
+                .two.active
+                .icons.active 2. Options
+            a(href="/shipping")
+                .three
+                .icons 3. Delivery
+            a(href="/payment")
+                .four
+                .icons 4. Payment
 
     #choices.container
         #plan-wrapper

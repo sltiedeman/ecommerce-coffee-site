@@ -17,14 +17,18 @@ block content
                     button.btn.btn-danger(type="submit") Logout
     .navigation-bar-small
         .icon-holder
-            .one.active
-            .icons.active 1. Welcome
-            .two
-            .icons 2. Options
-            .three
-            .icons 3. Delivery
-            .four
-            .icons 4. Payment
+            a(href="/")
+                .one.active
+                .icons.active 1. Welcome
+            a(href="/choices")
+                .two
+                .icons 2. Options
+            a(href="/shipping")
+                .three
+                .icons 3. Delivery
+            a(href="/payment")
+                .four
+                .icons 4. Payment
     .coffee-cup-background
         .coffee-cup-text
             h1 A better way to grind

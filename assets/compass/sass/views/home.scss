@@ -115,9 +115,29 @@
 			background-position: 0px -60px;
 		}
 
+		.three.active{
+			text-align: center;
+			background: url('../images/menu-steps-active.png') no-repeat;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px -60px;
+		}
+
 		.four{
 			text-align: center;
 			background: url('../images/menu-steps.png') no-repeat;
+			background-size: 35px, auto;
+			height: 30px;
+			float: left;
+			width: 5%;	
+			background-position: 0px -90px;
+		}
+
+		.four.active{
+			text-align: center;
+			background: url('../images/menu-steps-active.png') no-repeat;
 			background-size: 35px, auto;
 			height: 30px;
 			float: left;
