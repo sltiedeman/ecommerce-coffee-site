@@ -6,12 +6,12 @@ block content
     .navigation-bar-left
         img(src='./images/dc_roasters_200x124_lt.png')
     .navigation-bar-right
-        if (!user)
+        if (!username)
             a(href="/login")
                 button.btn.btn-success(type="submit") Login
             a(href="/register")    
                 button.btn.btn-primary(type="submit") Register
-        if (user)
+        if (username)
             p Welcome, 
                 a(href="/account") #{username}!
             a(href="/logout") 
@@ -40,76 +40,77 @@ block content
                 h2.shipping-label Address        
                 .form-group
                     label(for="fullName") Full Name
-                    input.form-control(type="text", id="fullName" name="fullName", placeholder="Full Name")
+                    input.form-control(type="text", id="fullName" name="fullName", placeholder="Full Name" value=(fullName))
                 .form-group
                     label(for="address1") Address Line 1
-                    input.form-control(type="text", id="address1" name="address1", placeholder="Address Line 1")
+                    input.form-control(type="text", id="address1" name="address1", placeholder="Address Line 1" value=(address1))
                     p.help-block Street address, P.O. Box, company name, c/o
                 .form-group
                     label(for="address2") Address Line 2
-                    input.form-control(type="text", id="address2" name="address2", placeholder="Address Line 2")
+                    input.form-control(type="text", id="address2" name="address2", placeholder="Address Line 2" value=(address2))
                     p.help-block Apartment, suite, unit, building, floor, etc.
                 .form-group
                     label(for="city") City
-                    input.form-control(type="text", id="city" name="city", placeholder="City")
+                    input.form-control(type="text", id="city" name="city", placeholder="City" value=(city))
                     p.help-block City, town, etc.
                 label(for="state") State
                 .form-group               
                     select.form-control(id="state", name="state", style="width:100px")
-                        option(value='AL') Alabama
-                        option(value='AK') Alaska
-                        option(value='AZ') Arizona
-                        option(value='AR') Arkansas
-                        option(value='CA') California
-                        option(value='CO') Colorado
-                        option(value='CT') Connecticut
-                        option(value='DE') Delaware
-                        option(value='DC') District Of Columbia
-                        option(value='FL') Florida
-                        option(value='GA') Georgia
-                        option(value='HI') Hawaii
-                        option(value='ID') Idaho
-                        option(value='IL') Illinois
-                        option(value='IN') Indiana
-                        option(value='IA') Iowa
-                        option(value='KS') Kansas
-                        option(value='KY') Kentucky
-                        option(value='LA') Louisiana
-                        option(value='ME') Maine
-                        option(value='MD') Maryland
-                        option(value='MA') Massachusetts
-                        option(value='MI') Michigan
-                        option(value='MN') Minnesota
-                        option(value='MS') Mississippi
-                        option(value='MO') Missouri
-                        option(value='MT') Montana
-                        option(value='NE') Nebraska
-                        option(value='NV') Nevada
-                        option(value='NH') New Hampshire
-                        option(value='NJ') New Jersey
-                        option(value='NM') New Mexico
-                        option(value='NY') New York
-                        option(value='NC') North Carolina
-                        option(value='ND') North Dakota
-                        option(value='OH') Ohio
-                        option(value='OK') Oklahoma
-                        option(value='OR') Oregon
-                        option(value='PA') Pennsylvania
-                        option(value='RI') Rhode Island
-                        option(value='SC') South Carolina
-                        option(value='SD') South Dakota
-                        option(value='TN') Tennessee
-                        option(value='TX') Texas
-                        option(value='UT') Utah
-                        option(value='VT') Vermont
-                        option(value='VA') Virginia
-                        option(value='WA') Washington
-                        option(value='WV') West Virginia
-                        option(value='WI') Wisconsin
-                        option(value='WY') Wyoming
+                        option(value='AL' selected=(state=='AL')) Alabama
+                        option(value='AK' selected=(state=='AK')) Alaska
+                        option(value='AZ' selected=(state=='AZ')) Arizona
+                        option(value='AR' selected=(state=='AR')) Arkansas
+                        option(value='CA' selected=(state=='CA')) California
+                        option(value='CO' selected=(state=='CO')) Colorado
+                        option(value='CT' selected=(state=='CT')) Connecticut
+                        option(value='DE' selected=(state=='DE')) Delaware
+                        option(value='DC' selected=(state=='DC')) District Of Columbia
+                        option(value='FL' selected=(state=='FL')) Florida
+                        option(value='GA' selected=(state=='GA')) Georgia
+                        option(value='HI' selected=(state=='HI')) Hawaii
+                        option(value='ID' selected=(state=='ID')) Idaho
+                        option(value='IL' selected=(state=='IL')) Illinois
+                        option(value='IN' selected=(state=='IN')) Indiana
+                        option(value='IA' selected=(state=='IA')) Iowa
+                        option(value='KS' selected=(state=='KS')) Kansas
+                        option(value='KY' selected=(state=='KY')) Kentucky
+                        option(value='LA' selected=(state=='LA')) Louisiana
+                        option(value='ME' selected=(state=='ME')) Maine
+                        option(value='MD' selected=(state=='MD')) Maryland
+                        option(value='MA' selected=(state=='MA')) Massachusetts
+                        option(value='MI' selected=(state=='MI')) Michigan
+                        option(value='MN' selected=(state=='MN')) Minnesota
+                        option(value='MS' selected=(state=='MS')) Mississippi
+                        option(value='MO' selected=(state=='MO')) Missouri
+                        option(value='MT' selected=(state=='MT')) Montana
+                        option(value='NE' selected=(state=='NE')) Nebraska
+                        option(value='NV' selected=(state=='NV')) Nevada
+                        option(value='NH' selected=(state=='NH')) New Hampshire
+                        option(value='NJ' selected=(state=='NJ')) New Jersey
+                        option(value='NM' selected=(state=='NM')) New Mexico
+                        option(value='NY' selected=(state=='NY')) New York
+                        option(value='NC' selected=(state=='NC')) North Carolina
+                        option(value='ND' selected=(state=='ND')) North Dakota
+                        option(value='OH' selected=(state=='OH')) Ohio
+                        option(value='OK' selected=(state=='OK')) Oklahoma
+                        option(value='OR' selected=(state=='OR')) Oregon
+                        option(value='PA' selected=(state=='PA')) Pennsylvania
+                        option(value='RI' selected=(state=='RI')) Rhode Island
+                        option(value='SC' selected=(state=='SC')) South Carolina
+                        option(value='SD' selected=(state=='SD')) South Dakota
+                        option(value='TN' selected=(state=='TN')) Tennessee
+                        option(value='TX' selected=(state=='TX')) Texas
+                        option(value='UT' selected=(state=='UT')) Utah
+                        option(value='VT' selected=(state=='VT')) Vermont
+                        option(value='VA' selected=(state=='VA')) Virginia
+                        option(value='WA' selected=(state=='WA')) Washington
+                        option(value='WV' selected=(state=='WV')) West Virginia
+                        option(value='WI' selected=(state=='WI')) Wisconsin
+                        option(value='WY' selected=(state=='WY')) Wyoming
                 .form-group
                     label(for="fullName") Zip Code
-                    input.form-control(type="text", id="zipcode" name="zipcode", placeholder="Zip Code", style="width:100px", minlength=5)
-
+                    input.form-control(type="text", id="zipCode" name="zipCode", placeholder="Zip Code", style="width:100px", minlength=5 value=(zipCode))
+                .button-holder
+                    input.btn.btn-primary.btn-lg(type="submit", name="submit")
 
 extends footer

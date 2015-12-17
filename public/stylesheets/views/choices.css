@@ -3,7 +3,7 @@ Error: Undefined variable: "$cream".
         on line 2 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/choices.scss
 
 1: body{
-2: 	background-color: $cream;
+2: 	background-color: $cream
 3: }
 4: 
 5: #plan-wrapper{
@@ -63,4 +63,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$cream\".\A         on line 2 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/choices.scss\A \A 1: body{\A 2: 	background-color: $cream;\A 3: }\A 4: \A 5: #plan-wrapper{\A 6: 	margin-top: 60px;\A 7: 	margin-bottom: 60px;"; }
+  content: "Error: Undefined variable: \"$cream\".\A         on line 2 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/choices.scss\A \A 1: body{\A 2: 	background-color: $cream\A 3: }\A 4: \A 5: #plan-wrapper{\A 6: 	margin-top: 60px;\A 7: 	margin-bottom: 60px;"; }

@@ -5,12 +5,12 @@ block content
     .navigation-bar-left
         img(src='./images/dc_roasters_200x124_lt.png')
     .navigation-bar-right
-        if (!user)
+        if (!username)
             a(href="/login")
                 button.btn.btn-success(type="submit") Login
             a(href="/register")    
                 button.btn.btn-primary(type="submit") Register
-        if (user)
+        if (username)
             p Welcome, 
                 a(href="/account") #{username}!
             a(href="/logout") 

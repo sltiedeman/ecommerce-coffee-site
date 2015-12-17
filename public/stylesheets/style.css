@@ -30,6 +30,11 @@
   padding: 30px;
 }
 
+/* line 28, ../../assets/compass/sass/views/shipping.scss */
+.button-holder {
+  text-align: center;
+}
+
 /* line 1, ../../assets/compass/sass/views/choices.scss */
 body {
   background-color: #edebe6;
@@ -71,7 +76,7 @@ body {
   padding: 30px;
 }
 /* line 33, ../../assets/compass/sass/views/choices.scss */
-#plan-wrapper #button-holder {
+#plan-wrapper .button-holder {
   text-align: center;
 }
 

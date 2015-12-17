@@ -26,10 +26,8 @@ router.post('/register', function(req,res,next){
 			return res.render('register', {err : err});
 		}
 		passport.authenticate('local')(req, res, function(){
-			console.log('==========');
-			console.log(req.user);
 			req.session.username = req.body.username;
-			res.render('choices', {username : req.session.username});
+			res.redirect('/choices')
 		});
 		
 	});
@@ -82,7 +80,8 @@ router.post('/login', function(req, res, next){
 			req.session.quarterPounds = user.quarterPounds;
 			req.session.grind = user.grind;
 			req.session.frequency = user.frequency;
-			return res.render('choices',{username: req.session.username, quarterPounds: req.session.quarterPounds, grind: req.session.grind, frequency: req.session.frequency});
+			// return res.render('choices',{username: req.session.username, quarterPounds: req.session.quarterPounds, grind: req.session.grind, frequency: req.session.frequency});
+			return res.redirect('/choices');
 		}
 		
 	})(req,res,next);	
@@ -99,7 +98,6 @@ router.get('/logout', function(req, res, next){
 
 router.get('/choices', function(req, res, next){
 	//Make sure the user is logged in!!
-			console.log("is true!!!!!!!!");
 
 	if(req.session.username){
 		//They do belong here.  Proceed with page
@@ -121,13 +119,13 @@ router.get('/choices', function(req, res, next){
 
 router.post('/choices', function(req, res, next){
 	if(req.session.username){
-		Account.findOne({username: req.session.username},
-		function (err, doc){
-			//when data exists, find it here
-			var grind = doc.grind;
-			var frequency = doc.frequency;
-			var pounds = doc.quarterPounds;
-		});
+		Account.findOne({username: req.session.username});
+		// function (err, doc){
+		// 	//when data exists, find it here
+		// 	var grind = doc.grind;
+		// 	var frequency = doc.frequency;
+		// 	var pounds = doc.quarterPounds;
+		// });
 		var newGrind = req.body.grind;
 		var newFrequency = req.body.frequency;
 		var newPounds = req.body.quarterPounds;
@@ -145,12 +143,66 @@ router.post('/choices', function(req, res, next){
 			}
 
 		)
-		res.render('shipping', {username: req.session.username});
+		// res.render('shipping', {username: req.session.username});
+		res.redirect('/shipping');
 	}
 });
 
 router.get('/shipping', function(req, res, next){
-	res.render('shipping');
+	if(req.session.username){
+		Account.findOne(
+			{username: req.session.username},
+			function (err, doc){
+				console.log(doc);
+				var currFullName = doc.fullName ? doc.fullName : "";
+				var currAddress1 = doc.address1 ? doc.address1 : "";
+				var currAddress2 = doc.address2 ? doc.address2 : "";
+				var currCity = doc.city ? doc.city : "";
+				var currState = doc.state ? doc.state : "";
+				var currZipCode = doc.zipCode ? doc.zipCode : "";
+				res.render('shipping', {username: req.session.username, fullName: currFullName, address1: currAddress1, address2: currAddress2, city: currCity, state: currState, zipCode: currZipCode });
+		});
+	}else{
+		res.redirect('/');
+	}
 });
+
+router.post('/shipping', function(req, res, next){
+	if(req.session.username){
+		Account.findOne({username: req.session.username});
+		// function (err, doc){
+		// 	//when data exists, find it here
+		// 	var grind = doc.grind;
+		// 	var frequency = doc.frequency;
+		// 	var pounds = doc.quarterPounds;
+		// });
+		var newFullName = req.body.fullName;
+		var newAddress1 = req.body.address1;
+		var newAddress2 = req.body.address2;
+		var newCity = req.body.city;
+		var newState = req.body.state;
+		var newZipCode = req.body.zipCode;
+
+		Account.findOneAndUpdate(
+			{ username: req.session.username },
+			{ fullName: newFullName, address1: newAddress1, address2: newAddress2, city: newCity, state: newState, zipCode: newZipCode},
+			{ upsert: true },		
+			function(err,account){
+				if (err) {
+					res.send("There was an error saving your preferences" + err);
+				}else{
+					account.save;
+				}
+			}
+
+		)
+		// res.render('shipping', {username: req.session.username});
+		res.redirect('/payment');
+	}
+})
+
+router.get('/payment', function(req, res, next){
+	res.send('<h1>Payment Page</h1>');
+})
 
 module.exports = router;

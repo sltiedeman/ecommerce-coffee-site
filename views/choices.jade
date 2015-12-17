@@ -60,7 +60,7 @@ block content
                             h2.choices-label 2. Quantity
                             .choices-lower-text-wrapper
                                 .choices-lower-text How many pounds (in increments of .25lb) would you like each delivery?
-                                    input(type="number", name="quarterPounds", placeholder="#{quarterPounds}", step=.25, min=0)
+                                    input(type="number", name="quarterPounds", value="#{quarterPounds}", step=.25, min=0)
                                     .choices-help-text You can cancel anytime. You can skip anytime;
                 #choices-grind.choices-block
                     .row
@@ -78,7 +78,7 @@ block content
                                     option(value="veryFine" selected=(grind == 'veryFine')) Very Fine
                                     
                                 .choices-help-text You can cancel anytime. You can skip anytime;
-                #button-holder
+                .button-holder
                      input.btn.btn-primary.btn-lg(type="submit", name="submit")
 
 extends footer
