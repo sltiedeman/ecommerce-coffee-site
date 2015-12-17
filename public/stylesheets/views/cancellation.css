@@ -1,0 +1,18 @@
+/* line 1, ../../../assets/compass/sass/views/cancellation.scss */
+#cancellation {
+  width: 60%;
+  margin: auto;
+}
+/* line 4, ../../../assets/compass/sass/views/cancellation.scss */
+#cancellation #cancellation-wrapper {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  text-align: center;
+}
+/* line 8, ../../../assets/compass/sass/views/cancellation.scss */
+#cancellation #cancellation-wrapper #cancellation-header {
+  margin: 40px 0 10px 0;
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: center;
+}

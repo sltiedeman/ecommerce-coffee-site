@@ -1,3 +1,76 @@
+/* line 1, ../../assets/compass/sass/views/cancellation.scss */
+#cancellation {
+  width: 60%;
+  margin: auto;
+}
+/* line 4, ../../assets/compass/sass/views/cancellation.scss */
+#cancellation #cancellation-wrapper {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  text-align: center;
+}
+/* line 8, ../../assets/compass/sass/views/cancellation.scss */
+#cancellation #cancellation-wrapper #cancellation-header {
+  margin: 40px 0 10px 0;
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* line 1, ../../assets/compass/sass/views/account.scss */
+#account {
+  margin-bottom: 60px;
+}
+/* line 3, ../../assets/compass/sass/views/account.scss */
+#account #account-wrapper {
+  margin-top: 60px;
+}
+/* line 5, ../../assets/compass/sass/views/account.scss */
+#account #account-wrapper #account-header {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* line 14, ../../assets/compass/sass/views/account.scss */
+.account-block {
+  border: 1px solid #d8d3c8;
+  border-radius: 5px;
+  margin: 30px auto;
+  padding: 30px;
+}
+/* line 19, ../../assets/compass/sass/views/account.scss */
+.account-block h2.account-label {
+  float: left;
+}
+/* line 22, ../../assets/compass/sass/views/account.scss */
+.account-block p.edit {
+  float: left;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+/* line 27, ../../assets/compass/sass/views/account.scss */
+.account-block .choices-holder {
+  clear: both;
+  width: 25%;
+  float: left;
+}
+/* line 32, ../../assets/compass/sass/views/account.scss */
+.account-block .data-holder {
+  width: 75%;
+  float: left;
+}
+/* line 35, ../../assets/compass/sass/views/account.scss */
+.account-block .data-holder p.margin {
+  margin-bottom: 30px;
+}
+
+/* line 41, ../../assets/compass/sass/views/account.scss */
+.button-holder {
+  text-align: center;
+}
+
 /* line 1, ../../assets/compass/sass/views/shipping.scss */
 #shipping {
   margin-bottom: 60px;

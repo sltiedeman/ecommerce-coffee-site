@@ -2,8 +2,9 @@
 @import "compass/css3";
 @import "configs/variables";
 
-
-
+@import "views/payment";
+@import "views/cancellation";
+@import "views/account";
 @import "views/shipping";
 @import "views/choices";
 @import "views/login";

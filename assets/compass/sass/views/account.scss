@@ -1,0 +1,43 @@
+#account{
+	margin-bottom: 60px;
+	#account-wrapper{
+		margin-top: 60px;
+		#account-header{
+			margin: 0 0 8px;
+			font-size: 32px;
+			line-height: 1.2;
+			text-align: left;
+		}
+	}
+}
+
+.account-block{
+	border: 1px solid darken($cream, 10%);
+	border-radius: 5px;
+	margin: 30px auto;
+	padding: 30px;
+	h2.account-label{
+		float: left;
+	}
+	p.edit{
+		float: left;
+		margin-top: 30px;
+		margin-left: 15px;
+	}
+	.choices-holder{
+		clear: both;
+		width: 25%;
+		float: left;
+	}
+	.data-holder{
+		width: 75%;
+		float: left;
+		p.margin{
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.button-holder{
+	text-align: center;
+}

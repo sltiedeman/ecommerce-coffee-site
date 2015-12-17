@@ -1,0 +1,41 @@
+extends layout
+
+block content
+
+    .navigation-bar
+        .navigation-bar-left
+            img(src='./images/dc_roasters_200x124_lt.png')
+        .navigation-bar-right
+            if (!username)
+                a(href="/login")
+                    button.btn.btn-success(type="submit") Login
+                a(href="/register")    
+                    button.btn.btn-primary(type="submit") Register
+            if (username)
+                p Welcome, 
+                    a(href="/account") #{username}!
+                a(href="/logout") 
+                    button.btn.btn-danger(type="submit") Logout
+    .navigation-bar-small
+            .icon-holder
+                a(href="/")
+                    .one
+                    .icons 1. Welcome
+                a(href="/choices")
+                    .two
+                    .icons 2. Options
+                a(href="/shipping")
+                    .three
+                    .icons 3. Delivery
+                a(href="/payment")
+                    .four
+                    .icons 4. Payment
+
+
+    #cancellation.container
+        #cancellation-wrapper
+            img(src="../images/sadface.ico")
+            #cancellation-header We are sorry to have lost you as a customer!
+            h4 We hope we can earn your business again in the future
+
+extends footer

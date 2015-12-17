@@ -1,0 +1,72 @@
+extends layout
+
+block content
+
+ .navigation-bar
+    .navigation-bar-left
+        img(src='./images/dc_roasters_200x124_lt.png')
+    .navigation-bar-right
+        if (!username)
+            a(href="/login")
+                button.btn.btn-success(type="submit") Login
+            a(href="/register")    
+                button.btn.btn-primary(type="submit") Register
+        if (username)
+            p Welcome, 
+                a(href="/account") #{username}!
+            a(href="/logout") 
+                button.btn.btn-danger(type="submit") Logout
+  .navigation-bar-small
+        .icon-holder
+            a(href="/")
+                .one
+                .icons 1. Welcome
+            a(href="/choices")
+                .two
+                .icons 2. Options
+            a(href="/shipping")
+                .three
+                .icons 3. Delivery
+            a(href="/payment")
+                .four
+                .icons 4. Payment
+
+ #account.container
+    #account-wrapper
+        #account-header Your Account Information
+        .account-block.col-sm-12
+            h2.account-label Choices
+            a(href='/choices')
+                p.edit (Edit)
+            .choices-holder
+                p Grind
+                p Frequency of Delivery
+                p Coffee, In Pounds 
+            .data-holder
+                p #{grind}
+                p #{frequency}
+                p.margin #{quarterPounds}
+            h2.account-label Delivery Information
+            a(href='/shipping')
+                p.edit (Edit)
+            .choices-holder
+                p Full Name
+                p Address
+                p Address2
+                p City
+                p State
+                p Zip
+                p Delivery Date
+            .data-holder
+                p #{fullName}
+                p #{address1}
+                p #{address2}
+                p #{city}
+                p #{state}
+                p #{zipCode}
+                p #{deliveryDate}
+        form(name="cancellation-form", action="/cancellation", method="post")
+            .button-holder           
+                input.btn.btn-danger.btn-lg(type="submit", name="submit" value="Cancel Account")
+                
+extends footer

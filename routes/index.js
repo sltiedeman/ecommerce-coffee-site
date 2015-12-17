@@ -1,7 +1,10 @@
 var express = require('express');
 var passport = require('passport');
+var nodemailer = require('nodemailer');
 var Account = require('../models/account');
 var router = express.Router();
+var vars = require('../config/vars.json');
+
 
 //////////////////HOME PAGE GET/////////////////////
 router.get('/', function(req, res, next){
@@ -44,15 +47,7 @@ router.get('/login', function(req, res, next){
 	res.render('login');
 });
 
-// router.get('/login', function(req, res, next){
-// 	//the user is already logged in
-// 	if(req.session.username){
-// 		res.redirect('/choices');
-// 	}
 
-// 	//They are here and are not logged in
-// 	res.render('login');
-// });
 
 router.post('/login', function(req, res, next){
 
@@ -160,7 +155,8 @@ router.get('/shipping', function(req, res, next){
 				var currCity = doc.city ? doc.city : "";
 				var currState = doc.state ? doc.state : "";
 				var currZipCode = doc.zipCode ? doc.zipCode : "";
-				res.render('shipping', {username: req.session.username, fullName: currFullName, address1: currAddress1, address2: currAddress2, city: currCity, state: currState, zipCode: currZipCode });
+				var currDeliveryDate = doc.deliveryDate ? doc.deliveryDate : "";
+				res.render('shipping', {username: req.session.username, fullName: currFullName, address1: currAddress1, address2: currAddress2, city: currCity, state: currState, zipCode: currZipCode, deliveryDate: currDeliveryDate });
 		});
 	}else{
 		res.redirect('/');
@@ -169,7 +165,7 @@ router.get('/shipping', function(req, res, next){
 
 router.post('/shipping', function(req, res, next){
 	if(req.session.username){
-		Account.findOne({username: req.session.username});
+		// Account.findOne({username: req.session.username});
 		// function (err, doc){
 		// 	//when data exists, find it here
 		// 	var grind = doc.grind;
@@ -182,10 +178,10 @@ router.post('/shipping', function(req, res, next){
 		var newCity = req.body.city;
 		var newState = req.body.state;
 		var newZipCode = req.body.zipCode;
-
+		var newDeliveryDate = req.body.deliveryDate;
 		Account.findOneAndUpdate(
 			{ username: req.session.username },
-			{ fullName: newFullName, address1: newAddress1, address2: newAddress2, city: newCity, state: newState, zipCode: newZipCode},
+			{ fullName: newFullName, address1: newAddress1, address2: newAddress2, city: newCity, state: newState, zipCode: newZipCode, deliveryDate: newDeliveryDate},
 			{ upsert: true },		
 			function(err,account){
 				if (err) {
@@ -204,5 +200,56 @@ router.post('/shipping', function(req, res, next){
 router.get('/payment', function(req, res, next){
 	res.send('<h1>Payment Page</h1>');
 })
+
+router.get('/account', function(req, res, next){
+	if(req.session.username){
+		Account.findOne(
+			{username: req.session.username},
+			function (err, doc){
+				var currGrind = doc.grind ? doc.grind : "N/A";
+				var currFrequency = doc.frequency ? doc.frequency : "N/A";
+				var	currQuarterPounds = doc.quarterPounds ? doc.quarterPounds: "N/A";
+				var currFullName = doc.fullName ? doc.fullName : "N/A";
+				var currAddress1 = doc.address1 ? doc.address1 : "N/A";
+				var currAddress2 = doc.address2 ? doc.address2 : "N/A";
+				var currCity = doc.city ? doc.city : "N/A";
+				var currState = doc.state ? doc.state : "N/A";
+				var currZipCode = doc.zipCode ? doc.zipCode : "N/A";
+				res.render('account', {username: req.session.username, grind: currGrind, frequency: currFrequency, quarterPounds: currQuarterPounds, fullName: currFullName, address1: currAddress1, address2: currAddress2, city: currCity, state: currState, zipCode: currZipCode});
+		});
+	}else{
+		res.redirect('/');
+	}
+})
+
+router.post('/cancellation', function(req, res, next){
+	if(req.session.username){
+		Account.findOneAndRemove(
+			{username: req.session.username},
+			{},
+			function(err,user){
+				
+			}
+		);
+		req.session.destroy();
+		res.redirect('/');
+	}else{
+		res.redirect('/cancellation');
+	}
+})
+
+router.get('/cancellation', function(req, res, next){
+	res.render('cancellation');
+})
+
+router.get('/email', function(req, res, next){
+	var transpoter = nodemailer.createTransport({
+		service: 'Gmail',
+		auth: {
+			user: vars.email,
+			pass: vars.password
+		}
+	})
+});
 
 module.exports = router;
