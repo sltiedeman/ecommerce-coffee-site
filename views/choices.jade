@@ -60,8 +60,9 @@ block content
                             h2.choices-label 2. Quantity
                             .choices-lower-text-wrapper
                                 .choices-lower-text How many pounds (in increments of .25lb) would you like each delivery?
-                                    input(type="number", name="quarterPounds", value="#{quarterPounds}", step=.25, min=0)
-                                    .choices-help-text You can cancel anytime. You can skip anytime;
+                                .choices-lower-text $19.99/lb
+                                input(type="number", name="quarterPounds", value="#{quarterPounds}", step=.25, min=0)
+                                .choices-help-text You can cancel anytime. You can skip anytime;
                 #choices-grind.choices-block
                     .row
                         .choices-image.col-sm-6
@@ -75,8 +76,7 @@ block content
                                     option(value="coarse" selected=(grind == 'coarse')) Coarse
                                     option(value="mediumCoarse" selected=(grind == 'mediumCoarse')) Medium Coarse
                                     option(value="fine" selected=(grind == 'fine')) Fine
-                                    option(value="veryFine" selected=(grind == 'veryFine')) Very Fine
-                                    
+                                    option(value="veryFine" selected=(grind == 'veryFine')) VeryFine                                   
                                 .choices-help-text You can cancel anytime. You can skip anytime;
                 .button-holder
                      input.btn.btn-primary.btn-lg(type="submit", name="submit")

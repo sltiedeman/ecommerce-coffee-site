@@ -20,10 +20,11 @@ block content
   .register-wrapper
      .container
        h1 Registration
-       if (err)
-        p.error
-          |#{err.message}
+       //- if (err)
+       //-  p.error
+       //-    |#{err.message}
        p.lead Pick a username and password
+       |#{failed}
        br
        form(role='form', action="/register",method="post", style='max-width: 300px;')
          .form-group

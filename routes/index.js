@@ -4,6 +4,7 @@ var nodemailer = require('nodemailer');
 var Account = require('../models/account');
 var router = express.Router();
 var vars = require('../config/vars.json');
+var stripe = require('stripe');
 
 
 //////////////////HOME PAGE GET/////////////////////
@@ -13,7 +14,11 @@ router.get('/', function(req, res, next){
 
 ///////////////////REGISTER GET/////////////////////
 router.get('/register', function(req, res, next){
+	if (req.query.failedtoregister){
+		res.render('register', {failed: "You must enter a password and username that does not exist"})
+	}
 	res.render('register');
+
 });
 
 
@@ -25,8 +30,9 @@ router.post('/register', function(req,res,next){
 	req.body.password,
 	function(error, account){
 		if(error){
+			console.log("----------------------");
 			console.log(error);
-			return res.render('register', {err : err});
+			return res.redirect('/register?failedtoregister=1');
 		}
 		passport.authenticate('local')(req, res, function(){
 			req.session.username = req.body.username;
@@ -198,7 +204,51 @@ router.post('/shipping', function(req, res, next){
 })
 
 router.get('/payment', function(req, res, next){
-	res.send('<h1>Payment Page</h1>');
+	if(req.session.username){
+		Account.findOne(
+			{username: req.session.username},
+			function (err,doc){
+				var currGrind = doc.grind ? doc.grind : "N/A";
+				var currFrequency = doc.frequency ? doc.frequency : "N/A";
+				var	currQuarterPounds = doc.quarterPounds ? doc.quarterPounds: "N/A";
+				var currFullName = doc.fullName ? doc.fullName : "N/A";
+				var currAddress1 = doc.address1 ? doc.address1 : "N/A";
+				var currAddress2 = doc.address2 ? doc.address2 : "N/A";
+				var currCity = doc.city ? doc.city : "N/A";
+				var currState = doc.state ? doc.state : "N/A";
+				var currZipCode = doc.zipCode ? doc.zipCode : "N/A";
+				var currDeliveryDate = doc.deliveryDate ? doc.deliveryDate : "N/A";
+				var unalteredCharge = currQuarterPounds * 19.99;
+				var totalCharge = (unalteredCharge + 5.95).toFixed(2);
+				var currCharge = unalteredCharge.toFixed(2);
+				res.render('payment', {username: req.session.username, grind: currGrind, 
+					frequency: currFrequency, quarterPounds: currQuarterPounds, 
+					fullName: currFullName, address1: currAddress1, address2: currAddress2, 
+					city: currCity, state: currState, zipCode: currZipCode, 
+					deliveryDate: currDeliveryDate, charge: currCharge, totalCharge : totalCharge, key: vars.key });
+
+			});
+	};
+})
+
+router.post('/payment', function(req, res, next){
+	var stripe = require("stripe")(
+	  "sk_test_NWYwCkzv8zQo8EYerx33QyXW"
+	);
+
+	var charge = req.body.totalCharge;
+	console.log('----------------------------');
+	console.log(charge);
+
+	stripe.charges.create({
+	  amount: 400,
+	  currency: "usd",
+	  source: "tok_17J6tgH48VAk7X4Me07EEUjm", // obtained with Stripe.js
+	  description: "Charge for test@example.com"
+	}, function(err, charge) {
+	  // asynchronously called
+	});
+	res.redirect('/');
 })
 
 router.get('/account', function(req, res, next){
@@ -215,7 +265,12 @@ router.get('/account', function(req, res, next){
 				var currCity = doc.city ? doc.city : "N/A";
 				var currState = doc.state ? doc.state : "N/A";
 				var currZipCode = doc.zipCode ? doc.zipCode : "N/A";
-				res.render('account', {username: req.session.username, grind: currGrind, frequency: currFrequency, quarterPounds: currQuarterPounds, fullName: currFullName, address1: currAddress1, address2: currAddress2, city: currCity, state: currState, zipCode: currZipCode});
+				var currDeliveryDate = doc.deliveryDate ? doc.deliveryDate : "N/A";
+				res.render('account', {username: req.session.username, 
+					grind: currGrind, frequency: currFrequency, quarterPounds: currQuarterPounds, 
+					fullName: currFullName, address1: currAddress1, address2: currAddress2, 
+					city: currCity, state: currState, zipCode: currZipCode, 
+					deliveryDate : currDeliveryDate});
 		});
 	}else{
 		res.redirect('/');
@@ -243,13 +298,34 @@ router.get('/cancellation', function(req, res, next){
 })
 
 router.get('/email', function(req, res, next){
-	var transpoter = nodemailer.createTransport({
+	var transporter = nodemailer.createTransport({
 		service: 'Gmail',
 		auth: {
 			user: vars.email,
 			pass: vars.password
 		}
 	})
+	var text = "This is a test email sent from my node server";
+	var mailOptions = {
+		from: 'Stephen Tiedemann <sltiedeman@gmail.com>',
+		to: 'Stephen Tiedemann <sltiedeman@gmail.com>',
+		subject: 'This is a test subject',
+		text: text
+	}
+
+	transporter.sendMail(mailOptions, function(error, info){
+		if(error){
+			console.log(error);
+			res.json({response: error});
+		}else{
+			console.log("Message was successfully sent.  Response was " + info.response);
+			res.json({response: "success"});
+		}
+	})
 });
+
+router.get('/contact', function(req, res, next){
+	res.render('contact');
+})
 
 module.exports = router;

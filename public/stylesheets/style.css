@@ -1,3 +1,89 @@
+/* line 1, ../../assets/compass/sass/views/payment.scss */
+#payment {
+  margin-bottom: 60px;
+}
+/* line 3, ../../assets/compass/sass/views/payment.scss */
+#payment #payment-wrapper {
+  margin-top: 60px;
+}
+/* line 5, ../../assets/compass/sass/views/payment.scss */
+#payment #payment-wrapper #payment-header {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: left;
+}
+/* line 11, ../../assets/compass/sass/views/payment.scss */
+#payment #payment-wrapper #payment-sub-header {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* line 21, ../../assets/compass/sass/views/payment.scss */
+.payment-block {
+  border: 1px solid #d8d3c8;
+  border-radius: 5px;
+  margin: 30px auto;
+  padding: 30px;
+}
+/* line 26, ../../assets/compass/sass/views/payment.scss */
+.payment-block p {
+  font-size: 18px;
+}
+/* line 29, ../../assets/compass/sass/views/payment.scss */
+.payment-block h2.payment-label {
+  float: left;
+}
+/* line 32, ../../assets/compass/sass/views/payment.scss */
+.payment-block .choices-holder {
+  clear: both;
+  width: 50%;
+  float: left;
+}
+/* line 36, ../../assets/compass/sass/views/payment.scss */
+.payment-block .choices-holder .total {
+  font-size: 24px;
+  font-weight: bold;
+}
+/* line 41, ../../assets/compass/sass/views/payment.scss */
+.payment-block .data-holder {
+  width: 50%;
+  float: left;
+}
+/* line 44, ../../assets/compass/sass/views/payment.scss */
+.payment-block .data-holder p.margin {
+  margin-bottom: 30px;
+}
+/* line 47, ../../assets/compass/sass/views/payment.scss */
+.payment-block .data-holder p.total {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* line 55, ../../assets/compass/sass/views/payment.scss */
+.button-holder button.stripe-button-el {
+  background-color: blue !important;
+  background-image: none;
+}
+
+/* line 62, ../../assets/compass/sass/views/payment.scss */
+.paymentsubmit {
+  text-align: center;
+}
+/* line 64, ../../assets/compass/sass/views/payment.scss */
+.paymentsubmit input {
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  height: 32px;
+  width: 119px;
+}
+
 /* line 1, ../../assets/compass/sass/views/cancellation.scss */
 #cancellation {
   width: 60%;
@@ -105,7 +191,8 @@
 
 /* line 28, ../../assets/compass/sass/views/shipping.scss */
 .button-holder {
-  text-align: center;
+  clear: all;
+  text-align: left;
 }
 
 /* line 1, ../../assets/compass/sass/views/choices.scss */
@@ -151,6 +238,10 @@ body {
 /* line 33, ../../assets/compass/sass/views/choices.scss */
 #plan-wrapper .button-holder {
   text-align: center;
+}
+/* line 36, ../../assets/compass/sass/views/choices.scss */
+#plan-wrapper .choices-lower-text, #plan-wrapper .choices-help-text {
+  margin: 10px 0 10px;
 }
 
 /* line 1, ../../assets/compass/sass/views/login.scss */
