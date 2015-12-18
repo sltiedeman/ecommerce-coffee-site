@@ -75,14 +75,15 @@ router.post('/login', function(req, res, next){
 		if(user){
 			//serialize and deserialize aren't mandatory
 			passport.serializeUser(function(user,done){
-				console.log("serializing" + user.username);
 				done(null, user);
 			});
 
 			passport.deserializeUser(function(obj, done){
-				console.log("deserializing " + obj);
 				done(null, obj);
-			})
+			});
+			if(user.accessLevel == 5){
+				req.session.accessLevel = 'Admin';
+			}
 			req.session.username = user.username;
 			req.session.quarterPounds = user.quarterPounds;
 			req.session.grind = user.grind;
@@ -116,7 +117,7 @@ router.get('/choices', function(req, res, next){
 				var currGrind = doc.grind ? doc.grind : undefined;
 				var currFrequency = doc.frequency ? doc.frequency : undefined;
 				var currQuarterPounds = doc.quarterPounds ? doc.quarterPounds : undefined;
-				res.render('choices', {username: req.session.username, grind: currGrind, frequency: currFrequency, quarterPounds: currQuarterPounds });
+				res.render('choices', {username: req.session.username, grind: currGrind, frequency: currFrequency, quarterPounds: currQuarterPounds, accessLevel: req.session.accessLevel});
 		});
 		
 	}else{
@@ -334,6 +335,16 @@ router.get('/email', function(req, res, next){
 
 router.get('/contact', function(req, res, next){
 	res.render('contact');
+})
+
+router.get('/admin', function(req, res, next){
+	if(req.session.accessLevel == "Admin"){
+		Account.find({}, function (err, doc, next){
+			res.render('admin', {accounts:doc});
+		});
+	}else{
+		res.redirect('/');
+	}
 })
 
 
