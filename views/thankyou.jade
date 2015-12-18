@@ -13,8 +13,9 @@ block content
                 a(href="/register")    
                     button.btn.btn-primary(type="submit") Register
             if (username)
-                p Welcome, 
-                    a(href="/account") #{username}!
+                p Welcome back, 
+                    a(href="/account") #{username}! &nbsp
+                        span.glyphicon.glyphicon-edit(ariahidden="true")
                 a(href="/logout") 
                     button.btn.btn-danger(type="submit") Logout
         .navigation-bar-small
@@ -35,6 +36,6 @@ block content
         #thankyou-wrapper
             img(src="../images/happyface.png")
             #thankyou-header Thank you for your order!
-            p We will e-mail you when your coffee has shipped
+            p We will e-mail you at #{emailaddress} when your coffee has shipped
 
 extends footer

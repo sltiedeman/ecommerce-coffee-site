@@ -13,8 +13,9 @@ block content
                 a(href="/register")    
                     button.btn.btn-primary(type="submit") Register
             if (username)
-                p Welcome, 
-                    a(href="/account") #{username}!
+                p Welcome back, 
+                    a(href="/account") #{username}! &nbsp
+                        span.glyphicon.glyphicon-edit(ariahidden="true")
                 a(href="/logout") 
                     button.btn.btn-danger(type="submit") Logout
     .navigation-bar-small

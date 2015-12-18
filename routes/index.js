@@ -30,17 +30,18 @@ router.post('/register', function(req,res,next){
 		return res.redirect('/register?passwordsmustmatch=1')
 	}
 	Account.register(new Account({
-		username: req.body.username
+		username: req.body.username,
+		emailaddress: req.body.emailaddress
 	}),
 	req.body.password,
 	function(error, account){
 		if(error){
-			console.log("----------------------");
-			console.log(error);
 			return res.redirect('/register?failedtoregister=1');
 		}
 		passport.authenticate('local')(req, res, function(){
 			req.session.username = req.body.username;
+			req.session.emailaddress = req.body.emailaddress;
+			console.log(req.session.emailaddress);
 			res.redirect('/choices')
 		});
 		
@@ -86,6 +87,7 @@ router.post('/login', function(req, res, next){
 			req.session.quarterPounds = user.quarterPounds;
 			req.session.grind = user.grind;
 			req.session.frequency = user.frequency;
+			req.session.emailaddress = user.emailaddress;
 			// return res.render('choices',{username: req.session.username, quarterPounds: req.session.quarterPounds, grind: req.session.grind, frequency: req.session.frequency});
 			return res.redirect('/choices');
 		}
@@ -104,7 +106,6 @@ router.get('/logout', function(req, res, next){
 
 router.get('/choices', function(req, res, next){
 	//Make sure the user is logged in!!
-
 	if(req.session.username){
 		//They do belong here.  Proceed with page
 		//Check and see if they have any set preferences already.
@@ -242,24 +243,20 @@ router.post('/payment', function(req, res, next){
 	  "sk_test_NWYwCkzv8zQo8EYerx33QyXW"
 	);
 
-	// var charge = req.body.totalCharge;
-	console.log(req.body);
-	console.log('----------------------------');
-
 	stripe.charges.create({
 	  amount: req.session.charge,
 	  currency: "usd",
 	  source: req.body.stripeToken, // obtained with Stripe.js
 	  description: "Charge for " + req.body.stripeEmail
 	}, function(err, charge) {
-	  		console.log(charge);
 	});
 	res.redirect('/thankyou');
 })
 
 router.get('/thankyou', function(req, res, next){
+	console.log('------------------');
 	console.log(req.session);
-	res.render('thankyou', {username: req.session.username})
+	res.render('thankyou', {username: req.session.username, emailaddress: req.session.emailaddress})
 })
 
 router.get('/account', function(req, res, next){
@@ -298,7 +295,7 @@ router.post('/cancellation', function(req, res, next){
 			}
 		);
 		req.session.destroy();
-		res.redirect('/');
+		res.redirect('/cancellation');
 	}else{
 		res.redirect('/cancellation');
 	}

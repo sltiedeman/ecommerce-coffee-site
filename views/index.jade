@@ -9,11 +9,12 @@ block content
             if (!username)
                 a(href="/login")
                     button.btn.btn-success(type="submit") Login
-                a(href="/register")    
-                    button.btn.btn-primary(type="submit") Register
+                //- a(href="/register")    
+                //-     button.btn.btn-primary(type="submit") Register
             if (username)
-                p Welcome, 
-                    a(href="/account") #{username}!
+                p Welcome back, 
+                    a(href="/account") #{username}! &nbsp 
+                        span.glyphicon.glyphicon-edit(ariahidden="true")
                 a(href="/logout") 
                     button.btn.btn-danger(type="submit") Logout
     .navigation-bar-small
@@ -74,5 +75,6 @@ block content
     .arrow-holder2
         .arrow-down2
     .get-started-section
-        button.get-started(type="submit") Get Started
+        a(href="/register") 
+            button.get-started(type="button") Get Started
 extends footer

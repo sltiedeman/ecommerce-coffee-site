@@ -1,13 +1,23 @@
 .register-wrapper{
 	padding-top: 100px;
-	text-align: center;
+	// text-align: center;
 	padding-bottom: 40px;
 	background-color: $cream;
+	h1, p{
+		text-align: center;
+	}
 	.container form{
 		margin: auto;
 		button{
+			margin-top: 30px;
 			margin-right: 5px;
 			margin-left: 5px;
 		}
+		.form-group label{
+			text-align: left;
+		}
+	}
+	.button-holder{
+		text-align: center;
 	}
 }

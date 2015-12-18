@@ -14,7 +14,9 @@ var Account = new Schema({
 	city: String,
 	state: String,
 	zipCode: String,
-	deliveryDate: String
+	deliveryDate: String,
+	emailaddress: String,
+	accessLevel: Number
 });
 
 Account.plugin(passportLocalMongoose);

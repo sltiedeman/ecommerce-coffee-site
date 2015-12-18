@@ -28,6 +28,9 @@
 			height: 40px;
 			width: 80px;
 		}
+		button.need-account{
+			margin-top: 0px;
+		}
 		p{
 			margin-top: 30px;
 			color: white;
@@ -37,6 +40,7 @@
 		.btn-danger{
 			margin-top: 0px;
 		}
+
 	}
 
 }
@@ -224,26 +228,6 @@
 	}
 }
 
-// .coffee-bags:before{
-// 	position: absolute;
-// 	width: 220px;
-// 	left: 0;
-// 	bottom: 0;
-// 	border-bottom: 20px solid white;
-// 	border-right: 20px solid transparent;
-// 	display: block;
-// 	content: " ";
-// }
-// .coffee-bags:after{
-// 	position: absolute;
-// 	left: 240px;
-// 	bottom: 0;
-// 	right: 0;
-// 	border-bottom: 20px solid white;
-// 	border-left: 20px solid transparent;
-// 	display: block;
-// 	content: " ";
-// }
 
 .how-it-works2{
 	height: 400px;
@@ -327,5 +311,22 @@
 		margin-top: 70px;
 		color: white;
 		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 645px){
+	.navigation-bar{
+		.navigation-bar-left{
+			width: 25%;
+			img{
+				margin-left: 20px;
+			}
+		}
+		.navigation-bar-right{
+			width: 75%;
+			button{
+				margin-right: 20px;
+			}
+		}
 	}
 }

@@ -13,8 +13,9 @@ block content
             a(href="/register")    
                 button.btn.btn-primary(type="submit") Register
         if (username)
-            p Welcome, 
-                a(href="/account") #{username}!
+            p Welcome back, 
+                a(href="/account") #{username}! &nbsp
+                    span.glyphicon.glyphicon-edit(ariahidden="true")
             a(href="/logout") 
                 button.btn.btn-danger(type="submit") Logout
   .navigation-bar-small
@@ -33,26 +34,27 @@ block content
                 .icons 4. Payment
 
  #shipping.container
-    #shipping-wrapper
+    #shipping-wrapper.col-xs-12
         #shipping-header Please enter your shipping info
         #shipping-sub-header We treat your coffee like gold.  Like black gold (not Texas tea). It will be shipped safely and is guaranteed.
+          .row
             form.col-sm-8(name="shipping-form", action="/shipping", method="post")
                 .shipping-block.col-sm-12
                     h2.shipping-label Address        
                     .form-group
                         label(for="fullName") Full Name
-                        input.form-control(type="text", id="fullName" name="fullName", placeholder="Full Name" value=(fullName))
+                        input.form-control(type="text", id="fullName", name="fullName", placeholder="John Doe", value=(fullName), required)
                     .form-group
                         label(for="address1") Address Line 1
-                        input.form-control(type="text", id="address1" name="address1", placeholder="Address Line 1" value=(address1))
+                        input.form-control(type="text", id="address1", name="address1", placeholder="100 Main Street", value=(address1), required)
                         p.help-block Street address, P.O. Box, company name, c/o
                     .form-group
                         label(for="address2") Address Line 2
-                        input.form-control(type="text", id="address2" name="address2", placeholder="Address Line 2" value=(address2))
+                        input.form-control(type="text", id="address2", name="address2", placeholder="Apt. 100", value=(address2))
                         p.help-block Apartment, suite, unit, building, floor, etc.
                     .form-group
                         label(for="city") City
-                        input.form-control(type="text", id="city" name="city", placeholder="City" value=(city))
+                        input.form-control(type="text", id="city" name="city", placeholder="YourCity", value=(city), required)
                         p.help-block City, town, etc.
                     label(for="state") State
                     .form-group               
@@ -109,11 +111,11 @@ block content
                             option(value='WI' selected=(state=='WI')) Wisconsin
                             option(value='WY' selected=(state=='WY')) Wyoming
                     .form-group
-                        label(for="fullName") Zip Code
-                        input.form-control(type="text", id="zipCode" name="zipCode", placeholder="Zip Code", style="width:100px", minlength=5 value=(zipCode))
+                        label  Zip Code
+                        input.form-control(type="text", id="zipCode" name="zipCode", placeholder="Zip Code", style="width:100px", value=(zipCode), minlength=5, required)
                     .form-group
-                        label(for="fullName") Delivery Date
-                        input.form-control(type="text", id="datepicker" name="deliveryDate", placeholder="", style="width:100px", value=(deliveryDate))
+                        label Delivery Date
+                        input.form-control(type="text", id="datepicker", name="deliveryDate", placeholder="", style="width:100px", value=(deliveryDate))
                 .button-holder
                     input.btn.btn-primary.btn-lg(type="submit", name="submit")
 

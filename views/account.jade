@@ -35,7 +35,7 @@ block content
  #account.container
     #account-wrapper
         #account-header Your Account Information
-        .account-block.col-sm-12
+        .account-block.col-md-6.row
             h2.account-label Choices
             a(href='/choices')
                 p.edit (Edit)
@@ -66,7 +66,7 @@ block content
                 p #{state}
                 p #{zipCode}
                 p #{deliveryDate}
-        form(name="cancellation-form", action="/cancellation", method="post")
+        form.col-xs-12(name="cancellation-form", action="/cancellation", method="post")
             .button-holder           
                 input.btn.btn-danger.btn-lg(type="submit", name="submit" value="Cancel Account")
                 

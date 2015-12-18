@@ -7,12 +7,12 @@ block content
           img(src='./images/dc_roasters_200x124_lt.png')
     .navigation-bar-right
         if (!username)
-            a(href="/login")
-                button.btn.btn-success(type="submit") Login
-            a(href="/register")    
-                button.btn.btn-primary(type="submit") Register
+          p
+            a(href="/login") Already have an account?
+          a(href='/login')
+                button.btn.btn-success.need-account(type="submit") Login
         if (username)
-            p Welcome, 
+            p Welcome back, 
                 a(href="/account") #{username}!
             a(href="/logout") 
                 button.btn.btn-danger(type="submit") Logout
@@ -29,15 +29,21 @@ block content
        br
        form(role='form', action="/register",method="post", style='max-width: 300px;', id="registration", name="Registration")
          .form-group
-             input.form-control(type='text', name="username", placeholder='Enter Username')
+             label Username:
+             input.form-control(type='text', name="username", placeholder='John Doe', minlength="5")
          .form-group
-           input.form-control(type='password', name="password", placeholder='Password')
+           label Password:
+           input.form-control(type='password', name="password", placeholder='5 Character Minimum', minlength="5")
          .form-group
-           input.form-control(type='password', name="password2", placeholder="Confirm Password")
+           input.form-control(type='password', name="password2", placeholder="Confirm Password", minlength="5")
            |#{nomatch}
-         button.btn.btn-success(type='submit') Submit
-         &nbsp;
-         a(href='/')
-           button.btn.btn-primary(type="button") Cancel
+         .form-group
+           label Email:
+           input.form-control(type='email', name="emailaddress", placeholder="example@email.com")
+         .button-holder
+           button.btn.btn-success(type='submit') Submit
+           &nbsp;
+           a(href='/')
+             button.btn.btn-primary(type="button") Cancel
 
   extends footer
