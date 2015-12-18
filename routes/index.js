@@ -16,6 +16,8 @@ router.get('/', function(req, res, next){
 router.get('/register', function(req, res, next){
 	if (req.query.failedtoregister){
 		res.render('register', {failed: "You must enter a password and username that does not exist"})
+	}else if(req.query.passwordsmustmatch){
+		res.render('register', {nomatch: "Your passwords must match"})
 	}
 	res.render('register');
 
@@ -24,6 +26,9 @@ router.get('/register', function(req, res, next){
 
 //////////////////REGISTER POST/////////////////////
 router.post('/register', function(req,res,next){
+	if(req.body.password != req.body.password2){
+		return res.redirect('/register?passwordsmustmatch=1')
+	}
 	Account.register(new Account({
 		username: req.body.username
 	}),
@@ -221,6 +226,7 @@ router.get('/payment', function(req, res, next){
 				var unalteredCharge = currQuarterPounds * 19.99;
 				var totalCharge = (unalteredCharge + 5.95).toFixed(2);
 				var currCharge = unalteredCharge.toFixed(2);
+				req.session.charge = totalCharge * 100;
 				res.render('payment', {username: req.session.username, grind: currGrind, 
 					frequency: currFrequency, quarterPounds: currQuarterPounds, 
 					fullName: currFullName, address1: currAddress1, address2: currAddress2, 
@@ -236,19 +242,24 @@ router.post('/payment', function(req, res, next){
 	  "sk_test_NWYwCkzv8zQo8EYerx33QyXW"
 	);
 
-	var charge = req.body.totalCharge;
+	// var charge = req.body.totalCharge;
+	console.log(req.body);
 	console.log('----------------------------');
-	console.log(charge);
 
 	stripe.charges.create({
-	  amount: 400,
+	  amount: req.session.charge,
 	  currency: "usd",
-	  source: "tok_17J6tgH48VAk7X4Me07EEUjm", // obtained with Stripe.js
-	  description: "Charge for test@example.com"
+	  source: req.body.stripeToken, // obtained with Stripe.js
+	  description: "Charge for " + req.body.stripeEmail
 	}, function(err, charge) {
-	  // asynchronously called
+	  		console.log(charge);
 	});
-	res.redirect('/');
+	res.redirect('/thankyou');
+})
+
+router.get('/thankyou', function(req, res, next){
+	console.log(req.session);
+	res.render('thankyou', {username: req.session.username})
 })
 
 router.get('/account', function(req, res, next){
@@ -327,5 +338,7 @@ router.get('/email', function(req, res, next){
 router.get('/contact', function(req, res, next){
 	res.render('contact');
 })
+
+
 
 module.exports = router;

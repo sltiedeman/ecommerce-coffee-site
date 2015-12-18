@@ -17,7 +17,7 @@ block content
                     a(href="/account") #{username}!
                 a(href="/logout") 
                     button.btn.btn-danger(type="submit") Logout
-    .navigation-bar-small
+        .navigation-bar-small
             .icon-holder
                 a(href="/")
                     .one
@@ -31,12 +31,10 @@ block content
                 a(href="/payment")
                     .four
                     .icons 4. Payment
-
-
-    #cancellation.container
-        #cancellation-wrapper
-            img(src="../images/sadface.ico")
-            #cancellation-header We are sorry to have lost you as a customer!
-            h4 We hope we can earn your business again in the future
+    #thankyou.container
+        #thankyou-wrapper
+            img(src="../images/happyface.png")
+            #thankyou-header Thank you for your order!
+            p We will e-mail you when your coffee has shipped
 
 extends footer
