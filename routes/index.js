@@ -31,7 +31,10 @@ router.post('/register', function(req,res,next){
 	}
 	Account.register(new Account({
 		username: req.body.username,
-		emailaddress: req.body.emailaddress
+		emailaddress: req.body.emailaddress,
+		choices: "untouched",
+		shipping: "untouched"
+
 	}),
 	req.body.password,
 	function(error, account){
@@ -128,19 +131,17 @@ router.get('/choices', function(req, res, next){
 router.post('/choices', function(req, res, next){
 	if(req.session.username){
 		Account.findOne({username: req.session.username});
-		// function (err, doc){
-		// 	//when data exists, find it here
-		// 	var grind = doc.grind;
-		// 	var frequency = doc.frequency;
-		// 	var pounds = doc.quarterPounds;
-		// });
+
 		var newGrind = req.body.grind;
 		var newFrequency = req.body.frequency;
 		var newPounds = req.body.quarterPounds;
+		var newChoice = req.body.choices;
+		console.log('--------------------------')
+		console.log(newChoice);
 
 		Account.findOneAndUpdate(
 			{ username: req.session.username },
-			{ grind: newGrind, frequency: newFrequency, quarterPounds: newPounds },
+			{ grind: newGrind, frequency: newFrequency, quarterPounds: newPounds, choices: newChoice },
 			{ upsert: true },		
 			function(err,account){
 				if (err) {
@@ -151,7 +152,6 @@ router.post('/choices', function(req, res, next){
 			}
 
 		)
-		// res.render('shipping', {username: req.session.username});
 		res.redirect('/shipping');
 	}
 });
@@ -192,9 +192,10 @@ router.post('/shipping', function(req, res, next){
 		var newState = req.body.state;
 		var newZipCode = req.body.zipCode;
 		var newDeliveryDate = req.body.deliveryDate;
+		var newShipping = req.body.shipping;
 		Account.findOneAndUpdate(
 			{ username: req.session.username },
-			{ fullName: newFullName, address1: newAddress1, address2: newAddress2, city: newCity, state: newState, zipCode: newZipCode, deliveryDate: newDeliveryDate},
+			{ fullName: newFullName, address1: newAddress1, address2: newAddress2, city: newCity, state: newState, zipCode: newZipCode, deliveryDate: newDeliveryDate, shipping: newShipping},
 			{ upsert: true },		
 			function(err,account){
 				if (err) {
@@ -229,12 +230,19 @@ router.get('/payment', function(req, res, next){
 				var totalCharge = (unalteredCharge + 5.95).toFixed(2);
 				var currCharge = unalteredCharge.toFixed(2);
 				req.session.charge = totalCharge * 100;
-				res.render('payment', {username: req.session.username, grind: currGrind, 
-					frequency: currFrequency, quarterPounds: currQuarterPounds, 
-					fullName: currFullName, address1: currAddress1, address2: currAddress2, 
-					city: currCity, state: currState, zipCode: currZipCode, 
-					deliveryDate: currDeliveryDate, charge: currCharge, totalCharge : totalCharge, key: vars.key });
-
+				if(doc.choices == "untouched"){
+					req.session.choices = true;
+					res.render('choices', {username: req.session.username, choices: req.session.choices})
+				}else if(doc.shipping == "untouched"){
+					req.session.shipping = true;
+					res.render('shipping', {username: req.session.username, shipping: req.session.shipping})
+				}else{
+					res.render('payment', {username: req.session.username, grind: currGrind, 
+						frequency: currFrequency, quarterPounds: currQuarterPounds, 
+						fullName: currFullName, address1: currAddress1, address2: currAddress2, 
+						city: currCity, state: currState, zipCode: currZipCode, 
+						deliveryDate: currDeliveryDate, charge: currCharge, totalCharge : totalCharge, key: vars.key });
+				}
 			});
 	};
 })

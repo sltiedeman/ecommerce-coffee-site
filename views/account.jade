@@ -66,8 +66,18 @@ block content
                 p #{state}
                 p #{zipCode}
                 p #{deliveryDate}
-        form.col-xs-12(name="cancellation-form", action="/cancellation", method="post")
-            .button-holder           
-                input.btn.btn-danger.btn-lg(type="submit", name="submit" value="Cancel Account")
-                
+
+    .button-holder.col-xs-12           
+        //- input.btn.btn-danger.btn-lg(type="submit", name="submit" value="Cancel Account")
+        button.btn.btn-info.btn-lg(type="button", data-toggle="modal", data-target="#myModal") Cancel
+        #myModal.modal.fade(role="dialog")
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button(type="button" class="close" data-dismiss="modal")&times;
+                        h4.modal-title Confirm Cancellation
+                    .modal-body Are you sure you want to cancel your account?
+                    .modal-footer
+                        form(name="cancellation-form", action="/cancellation", method="post")
+                            button.btn.btn-danger(type="submit") Close
 extends footer

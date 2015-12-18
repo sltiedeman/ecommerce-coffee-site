@@ -40,6 +40,9 @@ block content
         #plan-wrapper
             #choices-header Tell us what you want!!
             #choices-sub-header Shipping is free and you can skip any week
+            if(choices)
+                h3.warning Sorry. Unfortunately you need to fill out all of the choices before you can go to the payments page. Otherwise, who knows what we might send you!
+            
             form(name="choices-form", action="/choices", method="post")
                 #choices-frequency.choices-block
                     .row
@@ -49,14 +52,15 @@ block content
                             h2.choices-label 1. Frequency
                             .choices-lower-text-wrapper 
                                 .choices-lower-text How often would you like us to send you your coffee?
-                                select(id="frequency", name="frequency", class="form-control",selected="#{frequency}")
+                                select(id="frequency", name="frequency", class="form-control",selected="#{frequency}", required)
+                                    option(value="blank" selected=(frequency==" "))
                                     option(value="weekly" selected=(frequency == "weekly")) Weekly
                                     option(value="biweekly" selected=(frequency == "biweekly")) Every Two Weeks
                                     option(value="monthly" selected=(frequency == "monthly")) Monthly
                                     option(value="quarterly" selected=(frequency == "quarterly")) Quarterly
                                     option(value="semiannually" selected=(frequency == "semiannually")) Semi-Annually
                                     option(value="annually" selected=(frequency == "annually")) Annually
-                                .choices-help-text You can cancel anytime. You can skip anytime;
+                                .choices-help-text You can cancel anytime. You can skip anytime
                 #choices-quantity.choices-block
                     .row
                         .choices-image.col-sm-6
@@ -66,8 +70,9 @@ block content
                             .choices-lower-text-wrapper
                                 .choices-lower-text How many pounds (in increments of .25lb) would you like each delivery?
                                 .choices-lower-text $19.99/lb
-                                input(type="number", name="quarterPounds", value="#{quarterPounds}", step=.25, min=0)
-                                .choices-help-text You can cancel anytime. You can skip anytime;
+                                input(type="number", name="quarterPounds", value="#{quarterPounds}", step=.25, min=0, required)
+                                .choices-help-text You can cancel anytime. You can skip anytime
+                                input(type="hidden", name="choices", value="completed")
                 #choices-grind.choices-block
                     .row
                         .choices-image.col-sm-6
@@ -76,13 +81,14 @@ block content
                             h2.choices-label 3. Grind Type
                             .choices-lower-text-wrapper 
                                 .choices-lower-text How do you like your grinds?
-                                select(id="grind", name="grind", class="form-control")
+                                select(id="grind", name="grind", class="form-control", required)
+                                    option(value="blank", selected=(grind==""))
                                     option(value="extraCoarse" selected=(grind ==' extraCoarse')) Extra Coarse
                                     option(value="coarse" selected=(grind == 'coarse')) Coarse
                                     option(value="mediumCoarse" selected=(grind == 'mediumCoarse')) Medium Coarse
                                     option(value="fine" selected=(grind == 'fine')) Fine
                                     option(value="veryFine" selected=(grind == 'veryFine')) VeryFine                                   
-                                .choices-help-text You can cancel anytime. You can skip anytime;
+                                .choices-help-text You can cancel anytime. You can skip anytime
                 .button-holder
                      input.btn.btn-primary.btn-lg(type="submit", name="submit")
 
