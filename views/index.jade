@@ -17,20 +17,21 @@ block content
                         span.glyphicon.glyphicon-edit(ariahidden="true")
                 a(href="/logout") 
                     button.btn.btn-danger(type="submit") Logout
-    .navigation-bar-small
-        .icon-holder
-            a(href="/")
-                .one.active
-                .icons.active 1. Home
-            a(href="/choices")
-                .two
-                .icons 2. Options
-            a(href="/shipping")
-                .three
-                .icons 3. Delivery
-            a(href="/payment")
-                .four
-                .icons 4. Payment
+    if (username)
+        .navigation-bar-small
+            .icon-holder
+                a(href="/")
+                    .one.active
+                    .icons.active 1. Home
+                a(href="/choices")
+                    .two
+                    .icons 2. Options
+                a(href="/shipping")
+                    .three
+                    .icons 3. Delivery
+                a(href="/payment")
+                    .four
+                    .icons 4. Payment
     .coffee-cup-background
         .coffee-cup-text
             h1 A better way to grind
@@ -40,18 +41,17 @@ block content
         .spacer
         .we-source-coffee-text
             h3 We source coffee beans around the World and roast them fresh daily
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus tortor ac purus fringilla laoreet. Quisque viverra augue in sapien cursus placerat. Aliquam eu mi sollicitudin, bibendum lacus vitae, sodales mauris. Curabitur posuere non odio ac commodo. Nunc imperdiet, ipsum eget pharetra volutpat, felis felis luctus odio, nec scelerisque elit magna id justo. Donec in sapien maximus, tristique nunc eget, fermentum nisl. Donec bibendum luctus ante quis pulvinar. Morbi eget lectus nec elit molestie viverra vitae a purus. Phasellus ultricies metus lacus, in dapibus augue vehicula id. Aenean varius dictum velit et consectetur. Suspendisse blandit elit et vulputate consectetur.
-
-            Fusce magna mi, tempor sit amet pellentesque nec, tempus vitae turpis. Suspendisse dictum dui auctor ornare bibendum. Cras ornare sollicitudin maximus. Donec fringilla libero purus. Duis elementum tempor arcu id eleifend. In sollicitudin interdum nunc. Mauris at pellentesque diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit, est quis mollis lacinia, mauris nisl placerat libero, at porta mi lorem nec massa. Sed tincidunt dui urna, non malesuada dolor varius eget. Sed pretium dolor in gravida vehicula.
+            p Tiedemann Roasters is a boutique coffee shop that specializes in selling only the finest coffee in the world.  No matter how successful we may become we will always consider ourselves to be a boutique outfit. Why you may ask? When someone thinks about a boutique company they associate it with a special product.  They are willing to spend a bit more for it and when their friends ask them where they got their coffee they will be able to say with pride it came from a boutique company. In that moment they will have the satisfaction of knowing their friends think they must be rich for drinking such a fine product. Naturally, everyone will think it tastes better because of it.
+            p It is with a deep sense of responsibility that we source our product and great care is taken in how we deliver it to you, our most valued customer.  Even though our coffee beans come from the exact same fields as much cheaper coffee, it is our mission to make you think it is far better than anyone could possibly think it is. We accomplish this with sophisticated packaging and overpaying on designer labels.  Only through all of this hard work are you able to have the conviction to pull out your wallet and purchase with great pride and smugness.
     .how-it-works 
         p how it works
     .arrow-holder
         .arrow-down
     .coffee-bags
         p.title 1. We get the coffee
-        p Lorem ipsum is simply
-        p Lorem ipsum is simply
-        p Lorem ipsum is simply
+        p Each bean is hand selected
+        p Each bean is measured for precise size
+        p Each bean is examined under a microscope so only the best are chosen
     .how-it-works2
         .bag-arrow
             img(src="../images/CoffeeBags_corner.png")
@@ -59,17 +59,17 @@ block content
             img(src="../images/grower.jpg")
         .coffee-grower
             p.title 2. We pick up the coffee
-            p.text Lorem ipsum is simply
-            p.text Lorem ipsum is simply
-            p.text Lorem ipsum is simply
+            p.text We place the coffee in bags made with the finest Italian leather
+            p.text Each bag is then transported in a perfecty refrigerated truck
+            p.text Every six hours the bags are rotated for uniformity
     .arrow-holder
         .arrow-down
     .how-it-works3
         .coffee-cup
             p.title 3. You drink the coffee
-            p.text Lorem ipsum is simply
-            p.text Lorem ipsum is simply
-            p.text Lorem ipsum is simply
+            p.text The coffee hits your lips
+            p.text You swallow the coffee
+            p.text You want to buy more of the coffee
         .coffee-cup-image
             img(src="../images/cupSteam.jpg")
     .arrow-holder2

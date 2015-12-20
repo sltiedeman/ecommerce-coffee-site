@@ -40,4 +40,16 @@
 
 .button-holder{
 	text-align: center;
+	#myModal{
+		.modal-dialog{
+			width: 30%;
+			.modal-content{
+				background-color: $cream;
+			}
+			.modal-footer{
+				text-align: left;
+			}
+		}
+	}
 }
+
