@@ -241,7 +241,7 @@ router.get('/payment', function(req, res, next){
 						frequency: currFrequency, quarterPounds: currQuarterPounds, 
 						fullName: currFullName, address1: currAddress1, address2: currAddress2, 
 						city: currCity, state: currState, zipCode: currZipCode, 
-						deliveryDate: currDeliveryDate, charge: currCharge, totalCharge : totalCharge, key: vars.key });
+						deliveryDate: currDeliveryDate, charge: currCharge, totalCharge : totalCharge, key: "pk_test_KzKuz4A1dyTwp3wblI0PyCq8" });
 				}
 			});
 	};
