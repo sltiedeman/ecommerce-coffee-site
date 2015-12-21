@@ -320,7 +320,7 @@ body {
 }
 /* line 11, ../../assets/compass/sass/views/home.scss */
 .navigation-bar .navigation-bar-left img {
-  margin-left: 100px;
+  margin-left: 60px;
   margin-top: 5px;
   height: 70px;
 }
@@ -338,7 +338,7 @@ body {
 /* line 25, ../../assets/compass/sass/views/home.scss */
 .navigation-bar .navigation-bar-right button {
   margin-top: 20px;
-  margin-right: 40px;
+  margin-right: 60px;
   height: 40px;
   width: 80px;
 }
