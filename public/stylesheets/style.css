@@ -545,24 +545,26 @@ body {
   background-repeat: no-repeat;
   color: white;
   margin-top: 80px;
+  width: 100%;
 }
-/* line 222, ../../assets/compass/sass/views/home.scss */
+/* line 223, ../../assets/compass/sass/views/home.scss */
 .coffee-cup-background .coffee-cup-text {
   padding-top: 80px;
   padding-left: 75px;
 }
 
-/* line 228, ../../assets/compass/sass/views/home.scss */
+/* line 229, ../../assets/compass/sass/views/home.scss */
 .we-source-coffee {
   background-color: #edebe6;
+  width: 100%;
 }
-/* line 230, ../../assets/compass/sass/views/home.scss */
+/* line 232, ../../assets/compass/sass/views/home.scss */
 .we-source-coffee .spacer {
   height: 40px;
   width: 100%;
   background-color: #edebe6;
 }
-/* line 235, ../../assets/compass/sass/views/home.scss */
+/* line 237, ../../assets/compass/sass/views/home.scss */
 .we-source-coffee .we-source-coffee-text {
   background: white;
   width: 70%;
@@ -570,7 +572,7 @@ body {
   margin-left: 15%;
   font-size: 16px;
 }
-/* line 236, ../../assets/compass/sass/views/home.scss */
+/* line 238, ../../assets/compass/sass/views/home.scss */
 .we-source-coffee .we-source-coffee-text h3 {
   width: 70%;
   margin-bottom: 10px;
@@ -578,8 +580,9 @@ body {
   text-align: center;
 }
 
-/* line 250, ../../assets/compass/sass/views/home.scss */
+/* line 252, ../../assets/compass/sass/views/home.scss */
 .how-it-works {
+  width: 100%;
   background-color: #edebe6;
   height: 100px;
   line-height: 100px;
@@ -587,16 +590,17 @@ body {
   color: #196d46;
   text-align: center;
 }
-/* line 257, ../../assets/compass/sass/views/home.scss */
+/* line 260, ../../assets/compass/sass/views/home.scss */
 .how-it-works p {
   text-transform: uppercase;
 }
 
-/* line 262, ../../assets/compass/sass/views/home.scss */
+/* line 265, ../../assets/compass/sass/views/home.scss */
 .arrow-holder {
   position: relative;
+  width: 100%;
 }
-/* line 264, ../../assets/compass/sass/views/home.scss */
+/* line 268, ../../assets/compass/sass/views/home.scss */
 .arrow-holder .arrow-down {
   width: 0;
   height: 0;
@@ -609,95 +613,99 @@ body {
   top: 0px;
 }
 
-/* line 279, ../../assets/compass/sass/views/home.scss */
+/* line 283, ../../assets/compass/sass/views/home.scss */
 .coffee-bags {
+  width: 100%;
   height: 400px;
   background-image: url("../images/CoffeeBags.jpg");
   background-size: cover;
 }
-/* line 283, ../../assets/compass/sass/views/home.scss */
+/* line 288, ../../assets/compass/sass/views/home.scss */
 .coffee-bags .title {
   padding-top: 75px;
   font-size: 40px;
   color: white;
   padding-left: 75px;
 }
-/* line 289, ../../assets/compass/sass/views/home.scss */
+/* line 294, ../../assets/compass/sass/views/home.scss */
 .coffee-bags p {
   color: white;
   padding-left: 120px;
 }
 
-/* line 296, ../../assets/compass/sass/views/home.scss */
+/* line 301, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 {
+  width: 100%;
   height: 400px;
   background-color: #edebe6;
 }
-/* line 299, ../../assets/compass/sass/views/home.scss */
+/* line 305, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .bag-arrow {
   text-align: center;
 }
-/* line 302, ../../assets/compass/sass/views/home.scss */
+/* line 308, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .rotated-picture {
   margin-left: 50px;
   padding-top: 25px;
   transform: rotate(-10deg);
   float: left;
 }
-/* line 307, ../../assets/compass/sass/views/home.scss */
+/* line 313, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .rotated-picture img {
   height: 250px;
   border: 10px solid white;
 }
-/* line 312, ../../assets/compass/sass/views/home.scss */
+/* line 318, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .coffee-grower {
   float: left;
   padding-top: 25px;
   margin-left: 5%;
   color: #3a2f27;
 }
-/* line 317, ../../assets/compass/sass/views/home.scss */
+/* line 323, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .coffee-grower p.title {
   font-size: 40px;
 }
-/* line 320, ../../assets/compass/sass/views/home.scss */
+/* line 326, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .coffee-grower p.text {
   padding-left: 50px;
 }
 
-/* line 327, ../../assets/compass/sass/views/home.scss */
+/* line 333, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 {
+  width: 100%;
   clear: both;
   height: 400px;
   background-color: black;
   padding-left: 75px;
 }
-/* line 332, ../../assets/compass/sass/views/home.scss */
+/* line 339, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 .coffee-cup {
   float: left;
   width: 40%;
   padding-top: 75px;
   color: white;
 }
-/* line 337, ../../assets/compass/sass/views/home.scss */
+/* line 344, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 .coffee-cup p.title {
   font-size: 40px;
 }
-/* line 340, ../../assets/compass/sass/views/home.scss */
+/* line 347, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 .coffee-cup p.text {
   padding-left: 50px;
 }
-/* line 344, ../../assets/compass/sass/views/home.scss */
+/* line 351, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 .coffee-cup-image {
   float: left;
   width: 60%;
 }
 
-/* line 352, ../../assets/compass/sass/views/home.scss */
+/* line 359, ../../assets/compass/sass/views/home.scss */
 .arrow-holder2 {
+  width: 100%;
   position: relative;
 }
-/* line 354, ../../assets/compass/sass/views/home.scss */
+/* line 362, ../../assets/compass/sass/views/home.scss */
 .arrow-holder2 .arrow-down2 {
   width: 0;
   height: 0;
@@ -710,13 +718,14 @@ body {
   top: 0px;
 }
 
-/* line 367, ../../assets/compass/sass/views/home.scss */
+/* line 375, ../../assets/compass/sass/views/home.scss */
 .get-started-section {
+  width: 100%;
   height: 200px;
   background-color: #edebe6;
   text-align: center;
 }
-/* line 371, ../../assets/compass/sass/views/home.scss */
+/* line 380, ../../assets/compass/sass/views/home.scss */
 .get-started-section button.get-started {
   background-color: #196d46;
   height: 60px;
@@ -727,19 +736,19 @@ body {
 }
 
 @media screen and (max-width: 645px) {
-  /* line 383, ../../assets/compass/sass/views/home.scss */
+  /* line 392, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-left {
     width: 25%;
   }
-  /* line 385, ../../assets/compass/sass/views/home.scss */
+  /* line 394, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-left img {
     margin-left: 20px;
   }
-  /* line 389, ../../assets/compass/sass/views/home.scss */
+  /* line 398, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-right {
     width: 75%;
   }
-  /* line 391, ../../assets/compass/sass/views/home.scss */
+  /* line 400, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-right button {
     margin-right: 20px;
   }
@@ -749,37 +758,38 @@ body {
   background-color: #3a2f27;
   text-align: center;
   padding-bottom: 50px;
+  width: 100%;
 }
-/* line 5, ../../assets/compass/sass/views/footer.scss */
+/* line 6, ../../assets/compass/sass/views/footer.scss */
 .footer-wrapper img {
   margin-top: 25px;
 }
-/* line 8, ../../assets/compass/sass/views/footer.scss */
+/* line 9, ../../assets/compass/sass/views/footer.scss */
 .footer-wrapper .dc-links {
   margin-top: 10px;
 }
-/* line 10, ../../assets/compass/sass/views/footer.scss */
+/* line 11, ../../assets/compass/sass/views/footer.scss */
 .footer-wrapper .dc-links .link {
   color: #edebe6;
   padding: 25px;
 }
-/* line 15, ../../assets/compass/sass/views/footer.scss */
+/* line 16, ../../assets/compass/sass/views/footer.scss */
 .footer-wrapper .horizontal-rule {
   margin: 15px 0px 15px 25%;
   height: 2px;
   background-color: #6d5219;
   width: 50%;
 }
-/* line 21, ../../assets/compass/sass/views/footer.scss */
+/* line 22, ../../assets/compass/sass/views/footer.scss */
 .footer-wrapper p {
   color: #edebe6;
 }
-/* line 24, ../../assets/compass/sass/views/footer.scss */
+/* line 25, ../../assets/compass/sass/views/footer.scss */
 .footer-wrapper .tiny-text {
   font-size: 10px;
   color: #6d5219;
 }
-/* line 25, ../../assets/compass/sass/views/footer.scss */
+/* line 26, ../../assets/compass/sass/views/footer.scss */
 .footer-wrapper .tiny-text p {
   color: #6d5219;
 }
