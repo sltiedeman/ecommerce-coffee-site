@@ -726,24 +726,6 @@ body {
   font-size: 24px;
 }
 
-@media screen and (max-width: 645px) {
-  /* line 383, ../../assets/compass/sass/views/home.scss */
-  .navigation-bar .navigation-bar-left {
-    width: 25%;
-  }
-  /* line 385, ../../assets/compass/sass/views/home.scss */
-  .navigation-bar .navigation-bar-left img {
-    margin-left: 20px;
-  }
-  /* line 389, ../../assets/compass/sass/views/home.scss */
-  .navigation-bar .navigation-bar-right {
-    width: 75%;
-  }
-  /* line 391, ../../assets/compass/sass/views/home.scss */
-  .navigation-bar .navigation-bar-right button {
-    margin-right: 20px;
-  }
-}
 /* line 1, ../../assets/compass/sass/views/footer.scss */
 .footer-wrapper {
   background-color: #3a2f27;
