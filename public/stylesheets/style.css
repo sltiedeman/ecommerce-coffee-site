@@ -304,11 +304,6 @@ body {
   margin-left: 5px;
 }
 
-/* line 1, ../../assets/compass/sass/views/home.scss */
-html, body {
-  overflow-x: hidden;
-}
-
 /* line 5, ../../assets/compass/sass/views/home.scss */
 #intro-page-wrapper {
   position: absolute;
