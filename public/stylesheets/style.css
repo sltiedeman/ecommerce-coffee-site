@@ -757,21 +757,21 @@ body {
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* line 409, ../../assets/compass/sass/views/home.scss */
   body {
-    width: 1080px;
+    width: 1440px;
   }
 }
 /*ipad landscape*/
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* line 414, ../../assets/compass/sass/views/home.scss */
   body {
-    width: 1080px;
+    width: 1440px;
   }
 }
 /* iPhone [portrait + landscape] */
 @media only screen and (max-device-width: 480px) {
   /* line 419, ../../assets/compass/sass/views/home.scss */
   body {
-    width: 1080px;
+    width: 1440px;
   }
 }
 /* line 1, ../../assets/compass/sass/views/footer.scss */
