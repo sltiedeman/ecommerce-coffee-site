@@ -1,32 +1,35 @@
 .footer-wrapper{
-	background-color: #3a2f27;
+	background-color: #bfbfbf;
 	text-align: center;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 	width: 100%;
 	img{
+		width: 25%;
+		height: 25%;
 		margin-top: 25px;
 	}
-	.dc-links{
-		margin-top: 10px;
-		.link{
-			color: $cream;
-			padding: 25px;
-		}
-	}
+	// .dc-links{
+	// 	margin-top: 10px;
+	// 	.link{
+	// 		color: $cream;
+	// 		padding: 25px;
+	// 	}
+	// }
 	.horizontal-rule{
-		margin: 15px 0px 15px 25%;
-		height: 2px;
-		background-color: $brown-md;
-		width: 50%;
+		margin: 15px 0px 15px 35%;
+		height: 1px;
+		// background-color: $brown-md;
+		background-color: white;
+		width: 30%;
 	}
 	p{
 		color: $cream;
 	}
-	.tiny-text{
-		p{
-			color: $brown-md;
-		}
-		font-size: 10px;
-		color: $brown-md;
-	}
+	// .tiny-text{
+	// 	p{
+	// 		color: $brown-md;
+	// 	}
+	// 	font-size: 10px;
+	// 	color: $brown-md;
+	// }
 }

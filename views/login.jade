@@ -4,7 +4,7 @@ block content
     .navigation-bar
         .navigation-bar-left
             a(href='/')
-                img(src='./images/dc_roasters_200x124_lt.png')
+                img(src='./images/coolbeansLogo.png')
         .navigation-bar-right
             if (!user)
                 //- a(href="/login")
@@ -12,7 +12,7 @@ block content
                 p
                     a(href="/register") Need an account?
                 a(href="/register")  
-                    button.btn.btn-primary.need-account(type="submit") Register
+                    button.btn.need-account(type="submit") Register
             if (user)
                 p Welcome, 
                     a(href="/account") #{user.username}! &nbsp

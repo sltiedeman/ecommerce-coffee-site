@@ -2,6 +2,16 @@ body{
 	background-color: $cream
 }
 
+button.btn.btn-submit{
+		background-color:#006600;
+		width: 200px;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		height: 40px;
+		margin-top: 20px;
+	}
+
 #plan-wrapper{
 	margin-top: 60px;
 	margin-bottom: 60px;
@@ -31,14 +41,19 @@ body{
 		padding: 30px;
 	}
 	.button-holder{
-		text-align: center;
+		text-align: center;	
 	}
+
 	.choices-lower-text, .choices-help-text{
 		margin: 10px 0 10px;
 	}
 	h3.warning{
 		text-align: center;
 		color: red;
+	}
+	h2{
+		margin-top: 80px;
+		text-transform: uppercase;
 	}
 }
 

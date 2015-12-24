@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$brown_dk".
-        on line 63 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss
+Error: Undefined variable: "$green".
+        on line 66 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss
 
-58: 	background-color: #ffc04d;
-59: }
-60: 
-61: .navigation-bar{
-62: 	height: 80px;
-63: 	background-color: $brown_dk;
-64: 	position: fixed;
-65: 	top: 0;
-66: 	z-index: 100;
-67: 	width: 100%;
-68: 	.navigation-bar-left{
+61: 	background-color: #ffc04d;
+62: }
+63: 
+64: .navigation-bar{
+65: 	height: 80px;
+66: 	background-color: $green;
+67: 	position: fixed;
+68: 	top: 0;
+69: 	z-index: 100;
+70: 	width: 100%;
+71: 	font-family:'Raleway', sans-serif;
 
 Backtrace:
-/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss:63
+/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss:66
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -67,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$brown_dk\".\A         on line 63 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 58: 	background-color: #ffc04d;\A 59: }\A 60: \A 61: .navigation-bar{\A 62: 	height: 80px;\A 63: 	background-color: $brown_dk;\A 64: 	position: fixed;\A 65: 	top: 0;\A 66: 	z-index: 100;\A 67: 	width: 100%;\A 68: 	.navigation-bar-left{"; }
+  content: "Error: Undefined variable: \"$green\".\A         on line 66 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 61: 	background-color: #ffc04d;\A 62: }\A 63: \A 64: .navigation-bar{\A 65: 	height: 80px;\A 66: 	background-color: $green;\A 67: 	position: fixed;\A 68: 	top: 0;\A 69: 	z-index: 100;\A 70: 	width: 100%;\A 71: 	font-family:'Raleway', sans-serif;"; }

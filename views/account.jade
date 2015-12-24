@@ -5,7 +5,7 @@ block content
  .navigation-bar
     .navigation-bar-left
         a(href='/')
-            img(src='./images/dc_roasters_200x124_lt.png')
+            img(src='./images/coolbeansLogo.png')
     .navigation-bar-right
         if (!username)
             a(href="/login")
@@ -69,7 +69,7 @@ block content
 
     .button-holder.col-xs-12           
         //- input.btn.btn-danger.btn-lg(type="submit", name="submit" value="Cancel Account")
-        button.btn.btn-info.btn-lg(type="button", data-toggle="modal", data-target="#myModal") Delete Account
+        button.btn.btn-info(type="button", data-toggle="modal", data-target="#myModal") Delete Account
         #myModal.modal.fade(role="dialog")
             .modal-dialog
                 .modal-content

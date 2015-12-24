@@ -10,11 +10,13 @@ block content
     .navigation-bar
         .navigation-bar-left
             a(href='/')
-                img(src='./images/dc_roasters_200x124_lt.png')
+                img(src='./images/coolbeansLogo.png')
         .navigation-bar-right
             if (!username)
-                a(href="/login")
-                    button.btn.btn-success(type="submit") Login
+                a(href="/login") 
+                    button.btn.btn-green(type="submit") log in
+                a(href="/register")
+                    button.btn.btn-white(type="submit") sign up
                 //- a(href="/register")    
                 //-     button.btn.btn-primary(type="submit") Register
             if (username)
@@ -38,11 +40,19 @@ block content
                 a(href="/payment")
                     .four
                     .icons 4. Payment
-    .coffee-cup-background
-        .coffee-cup-text
-            h1 A better way to grind
-            h4 Freshly roasted coffee beans delivered 
-            h4 weekly to your door.
+    if (username)
+        .coffee-cup-background2
+            .coffee-cup-text
+              h1 A better way to grind
+              h4 Freshly roasted coffee beans delivered 
+              h4 weekly to your door.
+    else
+        .coffee-cup-background
+            .coffee-cup-text
+               h1 A better way to grind
+               h4 Freshly roasted coffee beans delivered 
+               h4 weekly to your door.
+               
     .we-source-coffee
         .spacer
         .we-source-coffee-text

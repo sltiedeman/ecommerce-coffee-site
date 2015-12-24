@@ -40,6 +40,12 @@
 
 .button-holder{
 	text-align: center;
+	button.btn.btn-info{
+		width: 200px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		height: 40px;
+	}
 	#myModal{
 		.modal-dialog{
 			width: 30%;
