@@ -42,7 +42,78 @@ block content
             #choices-sub-header Shipping is free and you can skip any week
             if(choices)
                 h3.warning Sorry. Unfortunately you need to fill out all of the choices before you can go to the payments page. Otherwise, who knows what we might send you!
-            
+
+            .row
+                .options-holder.col-sm-6
+                    .options
+                        h1 Individual Plan
+                        p.center-text For those who drink alone
+                        img(src="../images/solodrinker.jpg")
+                        .summary
+                            .row
+                                p.col-xs-6.align-right Cups per week: 
+                                p.col-xs-6 14
+                            .row
+                                p.col-xs-6.align-right Price per cup: 
+                                p.col-xs-6 $.50
+                            .row
+                                p.col-xs-6.align-right Weekly total: 
+                                p.col-xs-6 $7.00
+                            .row
+                                form(name="choices-form", action="/choices", method="post")
+                                    p.col-xs-6.align-right Grind Type:
+                                    .select-box.col-xs-6
+                                        select(id="grind", name="grind", class="form-control", required)
+                                            option(value="blank", selected=(grind==""))
+                                                option(value="extraCoarse" selected=(grind ==' extraCoarse')) Extra Coarse
+                                                option(value="coarse" selected=(grind == 'coarse')) Coarse
+                                                option(value="mediumCoarse" selected=(grind == 'mediumCoarse')) Medium Coarse
+                                                option(value="fine" selected=(grind == 'fine')) Fine
+                                                option(value="veryFine" selected=(grind == 'veryFine')) VeryFine 
+                                    input(type="hidden", name="frequency", value="weekly")
+                                    input(type="hidden", name="quarterPounds", value="0.35")
+                                    .row
+                                        .button-holder.col-xs-12
+                                            button.btn.btn-submit(type="submit", name="submit") Submit
+                        p.center-text Shipping is always free.
+                        p.center-text Skip any week.  Cancel any time.
+
+                .options-holder.col-sm-6
+                    .options
+                        h1 Family Plan
+                        p.center-text For those who drink together
+                        img(src="../images/coffeedrinkers.jpg")
+                        .summary
+                            .row
+                                p.col-xs-6.align-right Cups per week: 
+                                p.col-xs-6 40
+                            .row
+                                p.col-xs-6.align-right Price per cup: 
+                                p.col-xs-6 $.45
+                            .row
+                                p.col-xs-6.align-right Weekly total: 
+                                p.col-xs-6 $18.00 
+                            .row
+                                form(name="choices-form", action="/choices", method="post")
+                                    p.col-xs-6.align-right Grind Type:
+                                    .select-box.col-xs-6
+                                        select(id="grind", name="grind", class="form-control", required)
+                                            option(value="blank", selected=(grind==""))
+                                                option(value="extraCoarse" selected=(grind ==' extraCoarse')) Extra Coarse
+                                                option(value="coarse" selected=(grind == 'coarse')) Coarse
+                                                option(value="mediumCoarse" selected=(grind == 'mediumCoarse')) Medium Coarse
+                                                option(value="fine" selected=(grind == 'fine')) Fine
+                                                option(value="veryFine" selected=(grind == 'veryFine')) VeryFine 
+                                    input(type="hidden", name="frequency", value="weekly")
+                                    input(type="hidden", name="quarterPounds", value="0.9")
+                                    .row
+                                        .button-holder.col-xs-12
+                                            button.btn.btn-submit(type="submit", name="submit") Submit
+                        p.center-text Shipping is always free.
+                        p.center-text Skip any week. Cancel any time.
+
+            h1.center-text Prefer to customize your order?
+            p.center-text No problem.  Just make your selections below.
             form(name="choices-form", action="/choices", method="post")
                 #choices-frequency.choices-block
                     .row
@@ -69,7 +140,7 @@ block content
                             h2.choices-label 2. Quantity
                             .choices-lower-text-wrapper
                                 .choices-lower-text How many pounds (in increments of .25lb) would you like each delivery?
-                                .choices-lower-text $19.99/lb
+                                .choices-lower-text $20.00/lb
                                 input(type="number", name="quarterPounds", value="#{quarterPounds}", step=.25, min=0, required)
                                 .choices-help-text You can cancel anytime. You can skip anytime
                                 input(type="hidden", name="choices", value="completed")

@@ -5,62 +5,6 @@ html, body{
 
 }
 
-#intro-page-wrapper{
-	position: absolute;
-	height: 100vh;
-	width: 100%;
-	background-color: rgba(64,64,64,0.95);
-	top: 0%;
-	left: 0%;
-	z-index: 1000000000;
-	color: #f2f2f2;
-
-}
-
-#intro-page{
-	text-align: center;
-	overflow: scroll;
-}
-
-#intro-page h1{
-	font-family: 'Varela Round', sans-serif;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-}
-
-#intro-page p{
-	line-height: 125%;
-	width: 60%;
-	margin: auto;
-	text-align: justify;
-	font-size: 16px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-}
-
-#intro-page button{
-	font-family: 'Varela Round', sans-serif;
-	text-transform: uppercase;
-	text-align: center;
-	width: 225px;
-	padding: 15px;
-	color: white;
-	background-color: orange;
-	margin: auto;
-	font-size: 18px;
-	margin-top: 30px;
-	border: 0px;
-	letter-spacing: 3px;
-}
-
-#intro-page button:hover{
-	cursor: pointer;
-	background-color: #ffc04d;
-}
-
 .navigation-bar{
 	height: 80px;
 	background-color: $green;
@@ -284,31 +228,6 @@ html, body{
 	}
 }
 
-.we-source-coffee{
-	font-family:'Raleway', sans-serif;
-	font-weight: 300;
-	background-color: $cream;
-	width: 100%;
-	.spacer{
-		height: 40px;
-		width: 100%;
-		background-color: $cream;
-	}
-	.we-source-coffee-text{
-		h3{
-			width: 70%;
-			margin-bottom: 10px;
-			margin-left: 15%;
-			text-align: center;
-		}
-		background: white;
-		width: 70%;
-		padding: 20px;
-		margin-left: 15%;
-		font-size: 16px;
-	}
-}
-
 .how-it-works{
 	font-family:'Raleway', sans-serif;
 	font-weight: 300;
@@ -444,17 +363,35 @@ html, body{
 	font-family:'Raleway', sans-serif;
 	font-weight: 300;
 	width: 100%;
-	height: 200px;
 	background-color: $cream;
 	text-align: center;
+	margin-bottom: 50px;
 	button.get-started{
-		background-color: $green_lt;
+		background-color: $green;
 		height: 60px;
 		width: 200px;
-		margin-top: 70px;
+		margin-top:50px;
 		color: white;
 		font-size: 24px;
+		border: 0px;
 	}
+}
+
+.learn-more{
+	margin-bottom: 50px;
+	text-align: center;
+		h3{
+			margin-top: 10px;
+			margin-bottom: 50px;
+		}
+		button{
+			height: 60px;
+			background-color: white;
+			color: #333;
+			border: 0px;
+			width: 200px;
+			font-size: 24px;
+		}
 }
 
 @media screen and (max-width: 645px){

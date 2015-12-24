@@ -1,0 +1,21 @@
+/* line 1, ../../../assets/compass/sass/views/ourhistory.scss */
+.our-history-wrapper {
+  margin-top: 120px;
+  width: 60%;
+  margin-left: 20%;
+  padding: 20px;
+  border: 1px solid #b3b3b3;
+  background-color: white;
+}
+/* line 8, ../../../assets/compass/sass/views/ourhistory.scss */
+.our-history-wrapper h3 {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 14, ../../../assets/compass/sass/views/ourhistory.scss */
+  .our-history-wrapper {
+    width: 80%;
+    margin-left: 10%;
+  }
+}

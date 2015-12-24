@@ -1,0 +1,31 @@
+extends layout
+
+block content
+
+    .navigation-bar
+        .navigation-bar-left
+            a(href='/')
+                img(src='./images/coolbeansLogo.png')
+        .navigation-bar-right
+            if (!username)
+                a(href="/login") 
+                    button.btn.btn-green(type="submit") log in
+                a(href="/register")
+                    button.btn.btn-white(type="submit") sign up
+                //- a(href="/register")    
+                //-     button.btn.btn-primary(type="submit") Register
+            if (username)
+                p Welcome back, 
+                    a(href="/account") #{username}! &nbsp 
+                        span.glyphicon.glyphicon-edit(ariahidden="true")
+                a(href="/logout") 
+                    button.btn.btn-danger(type="submit") Logout
+    .our-history-wrapper
+        h3 A Little Bit (or a lot) About Us
+        p Cool Beans is a boutique coffee shop founded in 2015 in Atlanta, Georgia.  Throughout our entire long and storied history we have clung to the belief that coffee is what gives people a sense of community. Due to it's highly addictive nature we felt no coffee lover should ever go without.  As a result, our founding father Stephen Tiedemann sought to create a company that would ship coffee to people on a weekly basis. He believes in making the world a better place one cup at a time.
+        p Cool Beans is a boutique coffee shop that specializes in selling only the finest coffee in the world.  No matter how successful we may become we will always consider ourselves to be a boutique outfit. Why you may ask? When someone thinks about a boutique company they associate it with a premium product.  They are willing to spend a bit more for it and when their friends ask them where they got their coffee they will be able to say with pride it came from a boutique company.  Naturally, everyone will think it tastes better because of it.
+        p It is with a deep sense of responsibility that we source our product and great care is taken in how we deliver it to you, our most valued customer.  Even though our coffee beans come from the same fields as much cheaper coffee, it is our mission to make you think it is far better than the competition. We accomplish this with sophisticated packaging and overpaying on designer labels, which gives you the conviction to pull out your wallet and purchase with great pride.
+    .get-started-section
+        a(href="/register") 
+                button.get-started(type="button") Get Started
+extends footer

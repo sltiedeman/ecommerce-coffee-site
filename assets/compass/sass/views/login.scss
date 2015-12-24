@@ -9,6 +9,24 @@
 			margin-top: 30px;
 			margin-right: 5px;
 			margin-left: 5px;
+			height: 40px;
+			width: 120px;
 		}
+		.btn-register{
+			background-color: white;
+			color: #333;
+			text-transform: uppercase;
+		}
+		.btn-cancel{
+			background-color: #333;
+			color: white;
+			text-transform: uppercase;
+		}
+		.form-group label{
+			text-align: left;
+		}
+	}
+	.button-holder{
+		text-align: center;
 	}
 }

@@ -8,13 +8,16 @@ block content
                 img(src='./images/coolbeansLogo.png')
         .navigation-bar-right
             if (!username)
-                a(href="/login")
-                    button.btn.btn-success(type="submit") Login
-                a(href="/register")    
-                    button.btn.btn-primary(type="submit") Register
+                a(href="/login") 
+                    button.btn.btn-green(type="submit") log in
+                a(href="/register")
+                    button.btn.btn-white(type="submit") sign up
+                //- a(href="/register")    
+                //-     button.btn.btn-primary(type="submit") Register
             if (username)
                 p Welcome back, 
-                    a(href="/account") #{username}!
+                    a(href="/account") #{username}! &nbsp 
+                        span.glyphicon.glyphicon-edit(ariahidden="true")
                 a(href="/logout") 
                     button.btn.btn-danger(type="submit") Logout
     .navigation-bar-small

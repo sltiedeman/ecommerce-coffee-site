@@ -55,7 +55,8 @@
 	button.stripe-button-el{
 		background-color: blue!important;
 		background-image: none;
-
+		width: 120px;
+		border-radius: 0px;
 	}
 }
 
@@ -63,12 +64,10 @@
 	text-align: center;
 	input{
 		margin:10px;
-		border: 0;
-		border-radius: 5px;
 		background-color: red;
 		color: white;
 		height: 32px;
-		width: 119px;
+		width: 120px;
 	}
 
 }

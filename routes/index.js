@@ -6,7 +6,6 @@ var router = express.Router();
 // var vars = require('../config/vars.json');
 var stripe = require('stripe');
 
-
 //////////////////HOME PAGE GET/////////////////////
 router.get('/', function(req, res, next){
 	res.render('index', {username : req.session.username});
@@ -226,8 +225,8 @@ router.get('/payment', function(req, res, next){
 				var currState = doc.state ? doc.state : "N/A";
 				var currZipCode = doc.zipCode ? doc.zipCode : "N/A";
 				var currDeliveryDate = doc.deliveryDate ? doc.deliveryDate : "N/A";
-				var unalteredCharge = currQuarterPounds * 19.99;
-				var totalCharge = (unalteredCharge + 5.95).toFixed(2);
+				var unalteredCharge = currQuarterPounds * 20.00;
+				var totalCharge = (unalteredCharge).toFixed(2);
 				var currCharge = unalteredCharge.toFixed(2);
 				req.session.charge = totalCharge * 100;
 				if(doc.choices == "untouched"){
@@ -345,6 +344,10 @@ router.get('/contact', function(req, res, next){
 	res.render('contact');
 })
 
+router.get('/intro', function(req, res, next){
+	res.render('intro');
+})
+
 router.get('/admin', function(req, res, next){
 	if(req.session.accessLevel == "Admin"){
 		Account.find({}, function (err, doc, next){
@@ -354,6 +357,10 @@ router.get('/admin', function(req, res, next){
 		res.redirect('/');
 	}
 })
+
+router.get('/ourhistory', function(req, res, next){
+	res.render('ourhistory');
+});
 
 
 

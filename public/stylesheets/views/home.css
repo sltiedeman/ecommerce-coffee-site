@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$green".
-        on line 66 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss
+        on line 10 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss
 
-61: 	background-color: #ffc04d;
-62: }
-63: 
-64: .navigation-bar{
-65: 	height: 80px;
-66: 	background-color: $green;
-67: 	position: fixed;
-68: 	top: 0;
-69: 	z-index: 100;
-70: 	width: 100%;
-71: 	font-family:'Raleway', sans-serif;
+5: 
+6: }
+7: 
+8: .navigation-bar{
+9: 	height: 80px;
+10: 	background-color: $green;
+11: 	position: fixed;
+12: 	top: 0;
+13: 	z-index: 100;
+14: 	width: 100%;
+15: 	font-family:'Raleway', sans-serif;
 
 Backtrace:
-/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss:66
+/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss:10
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -67,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 66 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 61: 	background-color: #ffc04d;\A 62: }\A 63: \A 64: .navigation-bar{\A 65: 	height: 80px;\A 66: 	background-color: $green;\A 67: 	position: fixed;\A 68: 	top: 0;\A 69: 	z-index: 100;\A 70: 	width: 100%;\A 71: 	font-family:'Raleway', sans-serif;"; }
+  content: "Error: Undefined variable: \"$green\".\A         on line 10 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 5: \A 6: }\A 7: \A 8: .navigation-bar{\A 9: 	height: 80px;\A 10: 	background-color: $green;\A 11: 	position: fixed;\A 12: 	top: 0;\A 13: 	z-index: 100;\A 14: 	width: 100%;\A 15: 	font-family:'Raleway', sans-serif;"; }
