@@ -948,12 +948,16 @@ html, body {
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 42, ../../assets/compass/sass/views/register.scss */
+  /* line 41, ../../assets/compass/sass/views/register.scss */
+  .register-wrapper {
+    height: 100vh;
+  }
+  /* line 43, ../../assets/compass/sass/views/register.scss */
   .register-wrapper .container form {
     width: 80%;
     margin: auto;
   }
-  /* line 45, ../../assets/compass/sass/views/register.scss */
+  /* line 46, ../../assets/compass/sass/views/register.scss */
   .register-wrapper .container form .form-group input {
     height: 60px;
   }
