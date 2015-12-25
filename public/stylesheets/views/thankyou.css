@@ -1,19 +1,19 @@
 /*
 Error: Undefined variable: "$cream".
-        on line 38 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/thankyou.scss
+        on line 37 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/thankyou.scss
 
-33: 		// background-color: $brown-md;
-34: 		background-color: white;
-35: 		width: 30%;
-36: 	}
-37: 	p{
-38: 		color: $cream;
-39: 	}
-40: 	
-41: }
+32: 		// background-color: $brown-md;
+33: 		background-color: white;
+34: 		width: 30%;
+35: 	}
+36: 	p{
+37: 		color: $cream;
+38: 	}
+39: 	
+40: }
 
 Backtrace:
-/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/thankyou.scss:38
+/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/thankyou.scss:37
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -76,4 +76,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$cream\".\A         on line 38 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/thankyou.scss\A \A 33: 		// background-color: $brown-md;\A 34: 		background-color: white;\A 35: 		width: 30%;\A 36: 	}\A 37: 	p{\A 38: 		color: $cream;\A 39: 	}\A 40: 	\A 41: }"; }
+  content: "Error: Undefined variable: \"$cream\".\A         on line 37 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/thankyou.scss\A \A 32: 		// background-color: $brown-md;\A 33: 		background-color: white;\A 34: 		width: 30%;\A 35: 	}\A 36: 	p{\A 37: 		color: $cream;\A 38: 	}\A 39: 	\A 40: }"; }
