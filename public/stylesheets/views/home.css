@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$green".
-        on line 15 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss
+        on line 14 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss
 
-10: 
-11: }
-12: 
-13: .navigation-bar{
-14: 	height: 80px;
-15: 	background-color: $green;
-16: 	position: fixed;
-17: 	top: 0;
-18: 	z-index: 100;
-19: 	width: 100%;
-20: 	font-family:'Raleway', sans-serif;
+9: 
+10: }
+11: 
+12: .navigation-bar{
+13: 	height: 80px;
+14: 	background-color: $green;
+15: 	position: fixed;
+16: 	top: 0;
+17: 	z-index: 100;
+18: 	width: 100%;
+19: 	font-family:'Raleway', sans-serif;
 
 Backtrace:
-/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss:15
+/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss:14
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -67,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 15 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 10: \A 11: }\A 12: \A 13: .navigation-bar{\A 14: 	height: 80px;\A 15: 	background-color: $green;\A 16: 	position: fixed;\A 17: 	top: 0;\A 18: 	z-index: 100;\A 19: 	width: 100%;\A 20: 	font-family:'Raleway', sans-serif;"; }
+  content: "Error: Undefined variable: \"$green\".\A         on line 14 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 9: \A 10: }\A 11: \A 12: .navigation-bar{\A 13: 	height: 80px;\A 14: 	background-color: $green;\A 15: 	position: fixed;\A 16: 	top: 0;\A 17: 	z-index: 100;\A 18: 	width: 100%;\A 19: 	font-family:'Raleway', sans-serif;"; }

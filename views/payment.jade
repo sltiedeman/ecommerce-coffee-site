@@ -73,8 +73,7 @@ block content
                 p.total $#{totalCharge}
         .button-holder.col-xs-12
           form.paymentsubmit(name="payment", action="/payment", method="post")
-            script.stripe-button(src="https://checkout.stripe.com/checkout.js", data-key=(key), data-image="./images/coffee-chair.jpg", data-name="Tiedemann Roasters", data-description=((grind)+" Coffee"), data-amount=(totalCharge*100), data-locale="auto")   
-        .paymentsubmit
+            script.stripe-button(src="https://checkout.stripe.com/checkout.js", data-key=(key), data-image="./images/coffee-chair.jpg", data-name="Tiedemann Roasters", data-description=((grind)+" Coffee"), data-amount=(totalCharge*100), data-locale="auto")  
             a(href="/")
               input(type="button" value="Cancel Order")
   extends footer

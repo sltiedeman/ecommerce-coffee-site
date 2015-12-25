@@ -1,15 +1,15 @@
 #cancellation{
 	width: 60%;
 	margin: auto;
-	padding-bottom: 136px;
+	padding-bottom: 50px;
+	min-height: 90vh;
 	#cancellation-wrapper{
-		margin-bottom: 60px;
-		margin-top: 60px;
+		margin-bottom: 50px;
+		margin-top: 100px;
 		text-align: center;
 		#cancellation-header{
 			margin: 40px 0 10px 0;
 			font-size: 32px;
-			line-height: 1.2;
 			text-align: center;
 		}
 	}

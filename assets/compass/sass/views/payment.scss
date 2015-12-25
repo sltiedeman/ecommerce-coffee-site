@@ -1,7 +1,7 @@
 #payment{
-	margin-bottom: 156px;
+	margin-bottom: 50px;
 	#payment-wrapper{
-		margin-top: 60px;
+		margin-top: 50px;
 		#payment-header{
 			margin: 0 0 8px;
 			font-size: 32px;
@@ -53,9 +53,10 @@
 
 .button-holder{
 	button.stripe-button-el{
+		margin: 25px 10px 0px 10px;
 		background-color: blue!important;
 		background-image: none;
-		width: 120px;
+		width: 150px;
 		border-radius: 0px;
 	}
 }
@@ -63,11 +64,11 @@
 .paymentsubmit{
 	text-align: center;
 	input{
-		margin:10px;
+		margin: 25px 10px 0px 10px;
 		background-color: red;
 		color: white;
 		height: 32px;
-		width: 120px;
+		width: 150px;
 	}
 
 }
