@@ -7,6 +7,7 @@
 	position: relative;
 	.container form{
 		margin: auto;
+		width: 300px;
 		button{
 			margin-top: 30px;
 			margin-right: 5px;
@@ -30,5 +31,17 @@
 	}
 	.button-holder{
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.login-wrapper{
+		.container form{
+			width: 80%;
+			margin: auto;
+			.form-group input{
+				height: 60px;	
+			}
+		}
 	}
 }

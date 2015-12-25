@@ -383,8 +383,9 @@ button.btn.btn-submit {
 /* line 8, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form {
   margin: auto;
+  width: 300px;
 }
-/* line 10, ../../assets/compass/sass/views/login.scss */
+/* line 11, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form button {
   margin-top: 30px;
   margin-right: 5px;
@@ -392,27 +393,38 @@ button.btn.btn-submit {
   height: 40px;
   width: 120px;
 }
-/* line 17, ../../assets/compass/sass/views/login.scss */
+/* line 18, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form .btn-register {
   background-color: white;
   color: #333;
   text-transform: uppercase;
 }
-/* line 22, ../../assets/compass/sass/views/login.scss */
+/* line 23, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form .btn-cancel {
   background-color: #333;
   color: white;
   text-transform: uppercase;
 }
-/* line 27, ../../assets/compass/sass/views/login.scss */
+/* line 28, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form .form-group label {
   text-align: left;
 }
-/* line 31, ../../assets/compass/sass/views/login.scss */
+/* line 32, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .button-holder {
   text-align: center;
 }
 
+@media screen and (max-width: 1000px) {
+  /* line 39, ../../assets/compass/sass/views/login.scss */
+  .login-wrapper .container form {
+    width: 80%;
+    margin: auto;
+  }
+  /* line 42, ../../assets/compass/sass/views/login.scss */
+  .login-wrapper .container form .form-group input {
+    height: 60px;
+  }
+}
 /* line 1, ../../assets/compass/sass/views/home.scss */
 html, body {
   overflow-x: hidden;
