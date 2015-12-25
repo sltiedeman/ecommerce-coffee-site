@@ -299,21 +299,20 @@
 }
 /* line 1, ../../assets/compass/sass/views/shipping.scss */
 #shipping {
-  margin-bottom: 50px;
-  min-height: 90vh;
+  margin-bottom: 186px;
 }
-/* line 4, ../../assets/compass/sass/views/shipping.scss */
+/* line 3, ../../assets/compass/sass/views/shipping.scss */
 #shipping #shipping-wrapper {
   margin-top: 50px;
 }
-/* line 6, ../../assets/compass/sass/views/shipping.scss */
+/* line 5, ../../assets/compass/sass/views/shipping.scss */
 #shipping #shipping-wrapper #shipping-header {
   margin: 0 0 8px;
   font-size: 32px;
   line-height: 1.2;
   text-align: left;
 }
-/* line 12, ../../assets/compass/sass/views/shipping.scss */
+/* line 11, ../../assets/compass/sass/views/shipping.scss */
 #shipping #shipping-wrapper #shipping-sub-header {
   margin: 0;
   font-size: 20px;
@@ -322,7 +321,7 @@
   text-align: left;
 }
 
-/* line 22, ../../assets/compass/sass/views/shipping.scss */
+/* line 21, ../../assets/compass/sass/views/shipping.scss */
 .shipping-block {
   border: 1px solid #d8d3c8;
   border-radius: 5px;
@@ -330,19 +329,19 @@
   padding: 30px;
 }
 
-/* line 29, ../../assets/compass/sass/views/shipping.scss */
+/* line 28, ../../assets/compass/sass/views/shipping.scss */
 .button-holder {
   clear: all;
   text-align: left;
 }
 
-/* line 34, ../../assets/compass/sass/views/shipping.scss */
+/* line 33, ../../assets/compass/sass/views/shipping.scss */
 h3.warning {
   text-align: center;
   color: red;
 }
 
-/* line 39, ../../assets/compass/sass/views/shipping.scss */
+/* line 38, ../../assets/compass/sass/views/shipping.scss */
 .footer-wrapper2 {
   background-color: #bfbfbf;
   text-align: center;
@@ -351,23 +350,39 @@ h3.warning {
   position: absolute;
   bottom: 0;
 }
-/* line 46, ../../assets/compass/sass/views/shipping.scss */
+/* line 45, ../../assets/compass/sass/views/shipping.scss */
 .footer-wrapper2 img {
   max-width: 100%;
   margin-top: 25px;
 }
-/* line 50, ../../assets/compass/sass/views/shipping.scss */
+/* line 49, ../../assets/compass/sass/views/shipping.scss */
 .footer-wrapper2 .horizontal-rule {
   margin: 15px 0px 15px 35%;
   height: 1px;
   background-color: white;
   width: 30%;
 }
-/* line 57, ../../assets/compass/sass/views/shipping.scss */
+/* line 56, ../../assets/compass/sass/views/shipping.scss */
 .footer-wrapper2 p {
   color: #edebe6;
 }
 
+@media screen and (max-width: 1000px) {
+  /* line 64, ../../assets/compass/sass/views/shipping.scss */
+  #shipping-wrapper form {
+    width: 80%;
+    margin: auto;
+  }
+  /* line 67, ../../assets/compass/sass/views/shipping.scss */
+  #shipping-wrapper form .form-group input {
+    height: 60px;
+  }
+  /* line 70, ../../assets/compass/sass/views/shipping.scss */
+  #shipping-wrapper form .btn-submit {
+    width: 200px;
+    height: 80px;
+  }
+}
 /* line 1, ../../assets/compass/sass/views/choices.scss */
 body {
   background-color: #edebe6;
@@ -785,8 +800,12 @@ html, body {
   padding-top: 80px;
   padding-left: 75px;
 }
+/* line 220, ../../assets/compass/sass/views/home.scss */
+.coffee-cup-background .coffee-cup-text h1 {
+  font-size: 40px;
+}
 
-/* line 223, ../../assets/compass/sass/views/home.scss */
+/* line 226, ../../assets/compass/sass/views/home.scss */
 .coffee-cup-background2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -799,13 +818,17 @@ html, body {
   margin-top: 0px;
   width: 100%;
 }
-/* line 235, ../../assets/compass/sass/views/home.scss */
+/* line 238, ../../assets/compass/sass/views/home.scss */
 .coffee-cup-background2 .coffee-cup-text {
   padding-top: 80px;
   padding-left: 75px;
 }
-
 /* line 241, ../../assets/compass/sass/views/home.scss */
+.coffee-cup-background2 .coffee-cup-text h1 {
+  font-size: 40px;
+}
+
+/* line 247, ../../assets/compass/sass/views/home.scss */
 .how-it-works {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -818,12 +841,12 @@ html, body {
   text-align: center;
 }
 
-/* line 253, ../../assets/compass/sass/views/home.scss */
+/* line 259, ../../assets/compass/sass/views/home.scss */
 .arrow-holder {
   position: relative;
   width: 100%;
 }
-/* line 256, ../../assets/compass/sass/views/home.scss */
+/* line 262, ../../assets/compass/sass/views/home.scss */
 .arrow-holder .arrow-down {
   width: 0;
   height: 0;
@@ -836,7 +859,7 @@ html, body {
   top: 0px;
 }
 
-/* line 271, ../../assets/compass/sass/views/home.scss */
+/* line 277, ../../assets/compass/sass/views/home.scss */
 .coffee-bags {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -845,20 +868,20 @@ html, body {
   background-image: url("../images/CoffeeBags.jpg");
   background-size: cover;
 }
-/* line 278, ../../assets/compass/sass/views/home.scss */
+/* line 284, ../../assets/compass/sass/views/home.scss */
 .coffee-bags .title {
   padding-top: 75px;
   font-size: 40px;
   color: white;
   padding-left: 75px;
 }
-/* line 284, ../../assets/compass/sass/views/home.scss */
+/* line 290, ../../assets/compass/sass/views/home.scss */
 .coffee-bags p {
   color: white;
   padding-left: 120px;
 }
 
-/* line 291, ../../assets/compass/sass/views/home.scss */
+/* line 297, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -866,39 +889,39 @@ html, body {
   height: 400px;
   background-color: #edebe6;
 }
-/* line 297, ../../assets/compass/sass/views/home.scss */
+/* line 303, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .bag-arrow {
   text-align: center;
 }
-/* line 300, ../../assets/compass/sass/views/home.scss */
+/* line 306, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .rotated-picture {
   margin-left: 50px;
   padding-top: 25px;
   transform: rotate(-10deg);
   float: left;
 }
-/* line 305, ../../assets/compass/sass/views/home.scss */
+/* line 311, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .rotated-picture img {
   height: 250px;
   border: 10px solid white;
 }
-/* line 310, ../../assets/compass/sass/views/home.scss */
+/* line 316, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .coffee-grower {
   float: left;
   padding-top: 25px;
   margin-left: 5%;
   color: #3a2f27;
 }
-/* line 315, ../../assets/compass/sass/views/home.scss */
+/* line 321, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .coffee-grower p.title {
   font-size: 40px;
 }
-/* line 318, ../../assets/compass/sass/views/home.scss */
+/* line 324, ../../assets/compass/sass/views/home.scss */
 .how-it-works2 .coffee-grower p.text {
   padding-left: 50px;
 }
 
-/* line 325, ../../assets/compass/sass/views/home.scss */
+/* line 331, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -908,33 +931,33 @@ html, body {
   background-color: black;
   padding-left: 75px;
 }
-/* line 333, ../../assets/compass/sass/views/home.scss */
+/* line 339, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 .coffee-cup {
   float: left;
   width: 50%;
   padding-top: 75px;
   color: white;
 }
-/* line 338, ../../assets/compass/sass/views/home.scss */
+/* line 344, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 .coffee-cup p.title {
   font-size: 40px;
 }
-/* line 341, ../../assets/compass/sass/views/home.scss */
+/* line 347, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 .coffee-cup p.text {
   padding-left: 50px;
 }
-/* line 345, ../../assets/compass/sass/views/home.scss */
+/* line 351, ../../assets/compass/sass/views/home.scss */
 .how-it-works3 .coffee-cup-image {
   float: left;
   width: 50%;
 }
 
-/* line 353, ../../assets/compass/sass/views/home.scss */
+/* line 359, ../../assets/compass/sass/views/home.scss */
 .arrow-holder2 {
   width: 100%;
   position: relative;
 }
-/* line 356, ../../assets/compass/sass/views/home.scss */
+/* line 362, ../../assets/compass/sass/views/home.scss */
 .arrow-holder2 .arrow-down2 {
   width: 0;
   height: 0;
@@ -947,7 +970,7 @@ html, body {
   top: 0px;
 }
 
-/* line 369, ../../assets/compass/sass/views/home.scss */
+/* line 375, ../../assets/compass/sass/views/home.scss */
 .get-started-section {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -956,7 +979,7 @@ html, body {
   text-align: center;
   margin-bottom: 50px;
 }
-/* line 376, ../../assets/compass/sass/views/home.scss */
+/* line 382, ../../assets/compass/sass/views/home.scss */
 .get-started-section button.get-started {
   background-color: #bbbc20;
   height: 60px;
@@ -967,17 +990,17 @@ html, body {
   border: 0px;
 }
 
-/* line 387, ../../assets/compass/sass/views/home.scss */
+/* line 393, ../../assets/compass/sass/views/home.scss */
 .learn-more {
   margin-bottom: 50px;
   text-align: center;
 }
-/* line 390, ../../assets/compass/sass/views/home.scss */
+/* line 396, ../../assets/compass/sass/views/home.scss */
 .learn-more h3 {
   margin-top: 10px;
   margin-bottom: 50px;
 }
-/* line 394, ../../assets/compass/sass/views/home.scss */
+/* line 400, ../../assets/compass/sass/views/home.scss */
 .learn-more button {
   height: 60px;
   background-color: white;
@@ -988,59 +1011,59 @@ html, body {
 }
 
 @media screen and (max-width: 1100px) {
-  /* line 405, ../../assets/compass/sass/views/home.scss */
+  /* line 411, ../../assets/compass/sass/views/home.scss */
   .coffee-cup-background2, .coffee-cup-background {
     background-position: 0px -100px;
   }
 }
 @media screen and (max-width: 645px) {
-  /* line 412, ../../assets/compass/sass/views/home.scss */
+  /* line 418, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-left {
     width: 25%;
   }
-  /* line 414, ../../assets/compass/sass/views/home.scss */
+  /* line 420, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-left img {
     margin-left: 20px;
   }
-  /* line 418, ../../assets/compass/sass/views/home.scss */
+  /* line 424, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-right {
     width: 75%;
   }
-  /* line 420, ../../assets/compass/sass/views/home.scss */
+  /* line 426, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-right button {
     margin-right: 20px;
   }
 }
 @media screen and (max-width: 865px) {
-  /* line 429, ../../assets/compass/sass/views/home.scss */
+  /* line 435, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-left {
     width: 25%;
   }
-  /* line 431, ../../assets/compass/sass/views/home.scss */
+  /* line 437, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-left img.wide {
     display: none;
   }
-  /* line 434, ../../assets/compass/sass/views/home.scss */
+  /* line 440, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-left img.narrow {
     display: inline;
   }
-  /* line 438, ../../assets/compass/sass/views/home.scss */
+  /* line 444, ../../assets/compass/sass/views/home.scss */
   .navigation-bar .navigation-bar-right {
     width: 75%;
   }
 
-  /* line 442, ../../assets/compass/sass/views/home.scss */
+  /* line 448, ../../assets/compass/sass/views/home.scss */
   .navigation-bar-small {
     padding-left: 0%;
     padding-right: 0%;
   }
 
-  /* line 446, ../../assets/compass/sass/views/home.scss */
+  /* line 452, ../../assets/compass/sass/views/home.scss */
   .coffee-cup-background2, .coffee-cup-background {
     background-position: 0px -25px;
   }
 
-  /* line 450, ../../assets/compass/sass/views/home.scss */
+  /* line 456, ../../assets/compass/sass/views/home.scss */
   .how-it-works2 .rotated-picture img {
     height: 150px;
     margin-top: 50px;

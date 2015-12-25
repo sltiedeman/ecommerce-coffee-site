@@ -1,6 +1,5 @@
 #shipping{
-	margin-bottom: 50px;
-	min-height: 90vh;
+	margin-bottom: 186px;
 	#shipping-wrapper{
 		margin-top: 50px;
 		#shipping-header{
@@ -58,4 +57,20 @@ h3.warning{
 		color: $cream;
 	}
 	
+}
+
+@media screen and (max-width: 1000px){
+	#shipping-wrapper{
+		form{
+			width: 80%;
+			margin: auto;
+			.form-group input{
+				height: 60px;	
+			}
+			.btn-submit{
+				width: 200px;
+				height: 80px;
+			}
+		}
+	}
 }
