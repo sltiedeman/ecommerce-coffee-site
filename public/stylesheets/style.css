@@ -17,6 +17,33 @@
   text-align: center;
 }
 
+/* line 18, ../../assets/compass/sass/views/thankyou.scss */
+.footer-wrapper2 {
+  background-color: #bfbfbf;
+  text-align: center;
+  padding-bottom: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+/* line 25, ../../assets/compass/sass/views/thankyou.scss */
+.footer-wrapper2 img {
+  width: 25%;
+  height: 25%;
+  margin-top: 25px;
+}
+/* line 30, ../../assets/compass/sass/views/thankyou.scss */
+.footer-wrapper2 .horizontal-rule {
+  margin: 15px 0px 15px 35%;
+  height: 1px;
+  background-color: white;
+  width: 30%;
+}
+/* line 37, ../../assets/compass/sass/views/thankyou.scss */
+.footer-wrapper2 p {
+  color: #edebe6;
+}
+
 /* line 1, ../../assets/compass/sass/views/payment.scss */
 #payment {
   margin-bottom: 186px;
@@ -232,14 +259,41 @@
   text-align: left;
 }
 
+/* line 68, ../../assets/compass/sass/views/account.scss */
+.footer-wrapper2 {
+  background-color: #bfbfbf;
+  text-align: center;
+  padding-bottom: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+/* line 75, ../../assets/compass/sass/views/account.scss */
+.footer-wrapper2 img {
+  width: 25%;
+  height: 25%;
+  margin-top: 25px;
+}
+/* line 80, ../../assets/compass/sass/views/account.scss */
+.footer-wrapper2 .horizontal-rule {
+  margin: 15px 0px 15px 35%;
+  height: 1px;
+  background-color: white;
+  width: 30%;
+}
+/* line 87, ../../assets/compass/sass/views/account.scss */
+.footer-wrapper2 p {
+  color: #edebe6;
+}
+
 @media screen and (max-width: 1000px) {
-  /* line 70, ../../assets/compass/sass/views/account.scss */
+  /* line 95, ../../assets/compass/sass/views/account.scss */
   .button-holder #myModal .modal-dialog {
     width: 50%;
   }
 }
 @media screen and (max-width: 770px) {
-  /* line 78, ../../assets/compass/sass/views/account.scss */
+  /* line 103, ../../assets/compass/sass/views/account.scss */
   .button-holder #myModal .modal-dialog {
     margin-left: 20%;
     margin-top: 20%;
