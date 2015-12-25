@@ -25,7 +25,7 @@ block content
             p.lead Please enter your username and password below.
             |#{failed}
             br
-            form(role='form', action='/login', method='post', style="max-width: 300px;")
+            form(role='form', action='/login', method='post')
                 .form-group
                     input.form-control(type="text", name="username", placeholder="Enter Your Username")
                 .form-group

@@ -27,7 +27,7 @@ block content
        p.lead Pick a username and password
        p #{failed}
        br
-       form(role='form', action="/register",method="post", style='max-width: 300px;', id="registration", name="Registration")
+       form(role='form', action="/register",method="post", id="registration", name="Registration")
          .form-group
              label Username:
              input.form-control(type='text', name="username", placeholder='John Doe', minlength="5")
@@ -46,4 +46,4 @@ block content
            a(href='/')
              button.btn.btn-cancel(type="button") nevermind
 
-    extends footer
+      extends footer

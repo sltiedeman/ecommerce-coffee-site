@@ -907,16 +907,16 @@ html, body {
   padding-bottom: 50px;
   background-color: #edebe6;
   position: relative;
-  height: 100vh;
   margin-bottom: 136px;
 }
-/* line 9, ../../assets/compass/sass/views/register.scss */
+/* line 8, ../../assets/compass/sass/views/register.scss */
 .register-wrapper h1, .register-wrapper p {
   text-align: center;
 }
-/* line 12, ../../assets/compass/sass/views/register.scss */
+/* line 11, ../../assets/compass/sass/views/register.scss */
 .register-wrapper .container form {
   margin: auto;
+  width: 300px;
 }
 /* line 14, ../../assets/compass/sass/views/register.scss */
 .register-wrapper .container form button {
@@ -947,6 +947,17 @@ html, body {
   text-align: center;
 }
 
+@media screen and (max-width: 1000px) {
+  /* line 42, ../../assets/compass/sass/views/register.scss */
+  .register-wrapper .container form {
+    width: 80%;
+    margin: auto;
+  }
+  /* line 45, ../../assets/compass/sass/views/register.scss */
+  .register-wrapper .container form .form-group input {
+    height: 60px;
+  }
+}
 /* line 1, ../../assets/compass/sass/views/ourhistory.scss */
 .our-history-wrapper {
   margin-top: 120px;
