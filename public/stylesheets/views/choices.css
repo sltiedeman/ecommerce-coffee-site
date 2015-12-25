@@ -7,7 +7,7 @@ Error: Undefined variable: "$cream".
 3: }
 4: 
 5: button.btn.btn-submit{
-6: 		background-color:#006600;
+6: 		background-color:$green;
 7: 		width: 200px;
 
 Backtrace:
@@ -63,4 +63,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$cream\".\A         on line 2 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/choices.scss\A \A 1: body{\A 2: 	background-color: $cream\A 3: }\A 4: \A 5: button.btn.btn-submit{\A 6: 		background-color:#006600;\A 7: 		width: 200px;"; }
+  content: "Error: Undefined variable: \"$cream\".\A         on line 2 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/choices.scss\A \A 1: body{\A 2: 	background-color: $cream\A 3: }\A 4: \A 5: button.btn.btn-submit{\A 6: 		background-color:$green;\A 7: 		width: 200px;"; }

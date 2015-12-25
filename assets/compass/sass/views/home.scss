@@ -77,12 +77,12 @@ html, body{
 		}
 		p{
 			margin-top: 30px;
-			color: 333;
+			color: white;
 			margin-right: 20px;
 			display: inline-block;
 		}
 		a{
-			color: #333;
+			color: white;
 		}
 
 	}
@@ -94,10 +94,12 @@ html, body{
 	font-weight: 300;
 	margin-top: 80px;
 	clear: all;
-	height: 40px;
+	height: 36px;
 	background-color: #737373;
-	border-top: 2px solid #b3b3b3;
-	border-bottom: 2px solid #b3b3b3;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	// border-top: 2px solid #b3b3b3;
+	// border-bottom: 2px solid #b3b3b3;
 	padding-left: 10%;
 	padding-right: 10%;
 	.icon-holder{
@@ -218,7 +220,7 @@ html, body{
 		padding-top: 80px;
 		padding-left: 75px;
 		h1{
-			font-size: 40px;
+			font-size: 50px;
 		}
 	}
 }
@@ -239,7 +241,8 @@ html, body{
 		padding-top: 80px;
 		padding-left: 75px;
 		h1{
-			font-size:40px;
+			font-size:50px;
+			font-weight: 300;
 		}
 	}
 }
@@ -251,7 +254,7 @@ html, body{
 	background-color: $cream;
 	height: 100px;
 	line-height: 100px;
-	font-size: 40px;
+	font-size: 35px;
 	color: $green_lt;
 	text-align: center;
 }
@@ -385,8 +388,11 @@ html, body{
 		width: 200px;
 		margin-top:50px;
 		color: white;
-		font-size: 24px;
+		font-size: 20px;
 		border: 0px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		border-radius: 4px;
 	}
 }
 
@@ -403,7 +409,10 @@ html, body{
 			color: #333;
 			border: 0px;
 			width: 200px;
-			font-size: 24px;
+			font-size: 20px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			border-radius: 4px;
 		}
 }
 

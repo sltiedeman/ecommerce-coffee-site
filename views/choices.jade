@@ -40,7 +40,8 @@ block content
 
     #choices.container
         #plan-wrapper
-            #choices-header Tell us what you want!!
+            #choices-header
+               h1 Tell us what you want!!
             #choices-sub-header Shipping is free and you can skip any week
             if(choices)
                 h3.warning Sorry. Unfortunately you need to fill out all of the choices before you can go to the payments page. Otherwise, who knows what we might send you!
@@ -125,7 +126,7 @@ block content
                             h2.choices-label 1. Frequency
                             .choices-lower-text-wrapper 
                                 .choices-lower-text How often would you like us to send you your coffee?
-                                select(id="frequency", name="frequency", class="form-control",selected="#{frequency}", required)
+                                select.width(id="frequency", name="frequency", class="form-control",selected="#{frequency}", required)
                                     option(value="blank" selected=(frequency==" "))
                                     option(value="weekly" selected=(frequency == "weekly")) Weekly
                                     option(value="biweekly" selected=(frequency == "biweekly")) Every Two Weeks
@@ -143,7 +144,7 @@ block content
                             .choices-lower-text-wrapper
                                 .choices-lower-text How many pounds (in increments of .25lb) would you like each delivery?
                                 .choices-lower-text $20.00/lb
-                                input(type="number", name="quarterPounds", value="#{quarterPounds}", step=.25, min=0, required)
+                                input.width(type="number", name="quarterPounds", value="#{quarterPounds}", step=.25, min=0, required)
                                 .choices-help-text You can cancel anytime. You can skip anytime
                                 input(type="hidden", name="choices", value="completed")
                 #choices-grind.choices-block
@@ -154,7 +155,7 @@ block content
                             h2.choices-label 3. Grind Type
                             .choices-lower-text-wrapper 
                                 .choices-lower-text How do you like your grinds?
-                                select(id="grind", name="grind", class="form-control", required)
+                                select.width(id="grind", name="grind", class="form-control", required)
                                     option(value="blank", selected=(grind==""))
                                     option(value="extraCoarse" selected=(grind ==' extraCoarse')) Extra Coarse
                                     option(value="coarse" selected=(grind == 'coarse')) Coarse
