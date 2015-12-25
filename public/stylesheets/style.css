@@ -470,7 +470,7 @@ button.btn.btn-submit {
 /* line 1, ../../assets/compass/sass/views/home.scss */
 body {
   position: relative;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 /* line 6, ../../assets/compass/sass/views/home.scss */
