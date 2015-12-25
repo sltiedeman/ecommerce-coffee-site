@@ -841,6 +841,13 @@ html, body {
     margin-right: 20px;
   }
 }
+@media screen and (max-width: 865px) {
+  /* line 416, ../../assets/compass/sass/views/home.scss */
+  .how-it-works2 .rotated-picture img {
+    height: 150px;
+    margin-top: 50px;
+  }
+}
 /* line 1, ../../assets/compass/sass/views/footer.scss */
 .footer-wrapper {
   background-color: #bfbfbf;

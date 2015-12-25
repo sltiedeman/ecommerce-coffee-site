@@ -411,5 +411,13 @@ html, body{
 	}
 }
 
+@media screen and (max-width: 865px){
+	.how-it-works2 .rotated-picture{
+		img{
+			height: 150px;
+			margin-top: 50px;
+		}
+	}
+}
 
 
