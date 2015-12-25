@@ -1,8 +1,11 @@
 .register-wrapper{
 	padding-top: 100px;
 	// text-align: center;
-	padding-bottom: 40px;
+	padding-bottom: 50px;
 	background-color: $cream;
+	position: relative;
+	height: 100vh;
+	margin-bottom: 136px;
 	h1, p{
 		text-align: center;
 	}

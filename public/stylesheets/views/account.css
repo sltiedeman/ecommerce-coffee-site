@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$cream".
-        on line 15 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/account.scss
+        on line 20 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/account.scss
 
-10: 		}
-11: 	}
-12: }
-13: 
-14: .account-block{
-15: 	border: 1px solid darken($cream, 10%);
-16: 	border-radius: 5px;
-17: 	margin: 30px auto;
-18: 	padding: 30px;
-19: 	h2.account-label{
-20: 		float: left;
+15: 		}
+16: 	}
+17: }
+18: 
+19: .account-block{
+20: 	border: 1px solid darken($cream, 10%);
+21: 	border-radius: 5px;
+22: 	margin: 30px auto;
+23: 	padding: 30px;
+24: 	h2.account-label{
+25: 		float: left;
 
 Backtrace:
-/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/account.scss:15
+/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/account.scss:20
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/funcall.rb:170:in `perform_arg'
@@ -79,4 +79,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$cream\".\A         on line 15 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/account.scss\A \A 10: 		}\A 11: 	}\A 12: }\A 13: \A 14: .account-block{\A 15: 	border: 1px solid darken($cream, 10%);\A 16: 	border-radius: 5px;\A 17: 	margin: 30px auto;\A 18: 	padding: 30px;\A 19: 	h2.account-label{\A 20: 		float: left;"; }
+  content: "Error: Undefined variable: \"$cream\".\A         on line 20 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/account.scss\A \A 15: 		}\A 16: 	}\A 17: }\A 18: \A 19: .account-block{\A 20: 	border: 1px solid darken($cream, 10%);\A 21: 	border-radius: 5px;\A 22: 	margin: 30px auto;\A 23: 	padding: 30px;\A 24: 	h2.account-label{\A 25: 		float: left;"; }

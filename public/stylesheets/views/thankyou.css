@@ -2,14 +2,16 @@
 #thankyou {
   width: 60%;
   margin: auto;
+  position: relative;
+  height: 100vh;
 }
-/* line 4, ../../../assets/compass/sass/views/thankyou.scss */
+/* line 6, ../../../assets/compass/sass/views/thankyou.scss */
 #thankyou #thankyou-wrapper {
   margin-bottom: 60px;
   margin-top: 150px;
   text-align: center;
 }
-/* line 8, ../../../assets/compass/sass/views/thankyou.scss */
+/* line 10, ../../../assets/compass/sass/views/thankyou.scss */
 #thankyou #thankyou-wrapper #thankyou-header {
   margin: 40px 0 10px 0;
   font-size: 32px;

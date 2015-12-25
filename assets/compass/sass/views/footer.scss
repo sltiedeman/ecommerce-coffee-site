@@ -3,18 +3,13 @@
 	text-align: center;
 	padding-bottom: 20px;
 	width: 100%;
+	position: absolute;
+	bottom: 0;
 	img{
 		width: 25%;
 		height: 25%;
 		margin-top: 25px;
 	}
-	// .dc-links{
-	// 	margin-top: 10px;
-	// 	.link{
-	// 		color: $cream;
-	// 		padding: 25px;
-	// 	}
-	// }
 	.horizontal-rule{
 		margin: 15px 0px 15px 35%;
 		height: 1px;
@@ -25,11 +20,5 @@
 	p{
 		color: $cream;
 	}
-	// .tiny-text{
-	// 	p{
-	// 		color: $brown-md;
-	// 	}
-	// 	font-size: 10px;
-	// 	color: $brown-md;
-	// }
+	
 }

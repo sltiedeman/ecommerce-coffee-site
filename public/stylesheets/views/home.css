@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$green".
-        on line 10 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss
+        on line 11 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss
 
-5: 
-6: }
-7: 
-8: .navigation-bar{
-9: 	height: 80px;
-10: 	background-color: $green;
-11: 	position: fixed;
-12: 	top: 0;
-13: 	z-index: 100;
-14: 	width: 100%;
-15: 	font-family:'Raleway', sans-serif;
+6: 
+7: }
+8: 
+9: .navigation-bar{
+10: 	height: 80px;
+11: 	background-color: $green;
+12: 	position: fixed;
+13: 	top: 0;
+14: 	z-index: 100;
+15: 	width: 100%;
+16: 	font-family:'Raleway', sans-serif;
 
 Backtrace:
-/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss:10
+/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss:11
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -67,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 10 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 5: \A 6: }\A 7: \A 8: .navigation-bar{\A 9: 	height: 80px;\A 10: 	background-color: $green;\A 11: 	position: fixed;\A 12: 	top: 0;\A 13: 	z-index: 100;\A 14: 	width: 100%;\A 15: 	font-family:'Raleway', sans-serif;"; }
+  content: "Error: Undefined variable: \"$green\".\A         on line 11 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/home.scss\A \A 6: \A 7: }\A 8: \A 9: .navigation-bar{\A 10: 	height: 80px;\A 11: 	background-color: $green;\A 12: 	position: fixed;\A 13: 	top: 0;\A 14: 	z-index: 100;\A 15: 	width: 100%;\A 16: 	font-family:'Raleway', sans-serif;"; }
