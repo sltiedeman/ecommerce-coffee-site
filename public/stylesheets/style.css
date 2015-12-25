@@ -20,7 +20,7 @@
 /* line 1, ../../assets/compass/sass/views/payment.scss */
 #payment {
   margin-bottom: 50px;
-  min-height: 95%;
+  min-height: 90vh;
 }
 /* line 4, ../../assets/compass/sass/views/payment.scss */
 #payment #payment-wrapper {
