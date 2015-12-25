@@ -404,6 +404,12 @@ html, body{
 		}
 }
 
+@media screen and (max-width: 1100px){
+	.coffee-cup-background2, .coffee-cup-background{
+		background-position: 0px -100px;
+	}
+}
+
 @media screen and (max-width: 645px){
 	.navigation-bar{
 		.navigation-bar-left{
@@ -440,6 +446,9 @@ html, body{
 		padding-left: 0%;
 		padding-right: 0%;
 	}
+	.coffee-cup-background2, .coffee-cup-background{
+		background-position: 0px -25px;
+	}
 	.how-it-works2 .rotated-picture{
 		img{
 			height: 150px;
@@ -447,5 +456,7 @@ html, body{
 		}
 	}
 }
+
+
 
 
