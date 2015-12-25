@@ -1,20 +1,21 @@
 /*
 Error: Undefined variable: "$cream".
-        on line 5 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/register.scss
+        on line 6 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/register.scss
 
 1: .register-wrapper{
 2: 	padding-top: 100px;
 3: 	// text-align: center;
-4: 	padding-bottom: 50px;
-5: 	background-color: $cream;
-6: 	position: relative;
-7: 	margin-bottom: 136px;
+4: 	height: 100vh;
+5: 	padding-bottom: 136px;
+6: 	background-color: $cream;
+7: 	position: relative;
 8: 	h1, p{
 9: 		text-align: center;
 10: 	}
+11: 	.container form{
 
 Backtrace:
-/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/register.scss:5
+/Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/register.scss:6
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -66,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$cream\".\A         on line 5 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/register.scss\A \A 1: .register-wrapper{\A 2: 	padding-top: 100px;\A 3: 	// text-align: center;\A 4: 	padding-bottom: 50px;\A 5: 	background-color: $cream;\A 6: 	position: relative;\A 7: 	margin-bottom: 136px;\A 8: 	h1, p{\A 9: 		text-align: center;\A 10: 	}"; }
+  content: "Error: Undefined variable: \"$cream\".\A         on line 6 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/register.scss\A \A 1: .register-wrapper{\A 2: 	padding-top: 100px;\A 3: 	// text-align: center;\A 4: 	height: 100vh;\A 5: 	padding-bottom: 136px;\A 6: 	background-color: $cream;\A 7: 	position: relative;\A 8: 	h1, p{\A 9: 		text-align: center;\A 10: 	}\A 11: 	.container form{"; }

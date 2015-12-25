@@ -1,49 +1,53 @@
 extends layout
 
 block content
-  .navigation-bar
-    .navigation-bar-left
-        a(href='/')
-          img(src='./images/coolbeansLogo.png')
-    .navigation-bar-right
-        if (!username)
-          p
-            a(href="/login") Already have an account?
-          a(href='/login')
-                button.btn.need-account(type="submit") Login
-        if (username)
-            p Welcome back, 
-                a(href="/account") #{username}!
-            a(href="/logout") 
-                button.btn.btn-danger(type="submit") Logout
+  .total-page-wrapper
+    .navigation-bar
+      .navigation-bar-left
+          a(href='/')
+            img(src='./images/coolbeansLogo.png')
+      .navigation-bar-right
+          if (!username)
+            p
+              a(href="/login") Already have an account?
+            a(href='/login')
+                  button.btn.need-account(type="submit") Login
+          if (username)
+              p Welcome back, 
+                  a(href="/account") #{username}!
+              a(href="/logout") 
+                  button.btn.btn-danger(type="submit") Logout
 
-  
-  .register-wrapper
-     .container
-       h1 Registration
-       //- if (err)
-       //-  p.error
-       //-    |#{err.message}
-       p.lead Pick a username and password
-       p #{failed}
-       br
-       form(role='form', action="/register",method="post", id="registration", name="Registration")
-         .form-group
-             label Username:
-             input.form-control(type='text', name="username", placeholder='John Doe', minlength="5")
-         .form-group
-           label Password:
-           input.form-control(type='password', name="password", placeholder='5 Character Minimum', minlength="5")
-         .form-group
-           input.form-control(type='password', name="password2", placeholder="Confirm Password", minlength="5")
-           |#{nomatch}
-         .form-group
-           label Email:
-           input.form-control(type='email', name="emailaddress", placeholder="example@email.com")
-         .button-holder
-           button.btn.btn-register(type='submit') Register
-           &nbsp;
-           a(href='/')
-             button.btn.btn-cancel(type="button") nevermind
+    
+    .register-wrapper
+      .container
+         h1 Registration
+         //- if (err)
+         //-  p.error
+         //-    |#{err.message}
+         p.lead Pick a username and password
+         p #{failed}
+         br
+         form(role='form', action="/register",method="post", id="registration", name="Registration")
+           .form-group
+               label Username:
+               input.form-control(type='text', name="username", placeholder='John Doe', minlength="5")
+           .form-group
+             label Password:
+             input.form-control(type='password', name="password", placeholder='5 Character Minimum', minlength="5")
+           .form-group
+             input.form-control(type='password', name="password2", placeholder="Confirm Password", minlength="5")
+             |#{nomatch}
+           .form-group
+             label Email:
+             input.form-control(type='email', name="emailaddress", placeholder="example@email.com")
+           .button-holder
+             button.btn.btn-register(type='submit') Register
+             &nbsp;
+             a(href='/')
+               button.btn.btn-cancel(type="button") nevermind
 
-      extends footer
+      .footer-wrapper
+        img(src="../images/coolbeansLogo.png")
+        .horizontal-rule
+        p &copy2015 Stephen Tiedemann

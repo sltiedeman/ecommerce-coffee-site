@@ -7,7 +7,7 @@
 	position: relative;
 	.container form{
 		margin: auto;
-		width: 300px;
+		width: 400px;
 		button{
 			margin-top: 30px;
 			margin-right: 5px;
@@ -19,11 +19,15 @@
 			background-color: white;
 			color: #333;
 			text-transform: uppercase;
+			width: 100px;
+			height: 40px;
 		}
 		.btn-cancel{
 			background-color: #333;
 			color: white;
 			text-transform: uppercase;
+			width: 100px;
+			height: 40px;
 		}
 		.form-group label{
 			text-align: left;
@@ -41,6 +45,10 @@
 			margin: auto;
 			.form-group input{
 				height: 60px;	
+			}
+			.btn-register, .btn-cancel{
+				width: 150px;
+				height: 80px;
 			}
 		}
 	}
