@@ -377,15 +377,14 @@ button.btn.btn-submit {
   text-align: center;
   padding-bottom: 40px;
   background-color: #edebe6;
-  height: 100vh;
   position: relative;
 }
-/* line 8, ../../assets/compass/sass/views/login.scss */
+/* line 7, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form {
   margin: auto;
   width: 400px;
 }
-/* line 11, ../../assets/compass/sass/views/login.scss */
+/* line 10, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form button {
   margin-top: 30px;
   margin-right: 5px;
@@ -393,7 +392,7 @@ button.btn.btn-submit {
   height: 40px;
   width: 120px;
 }
-/* line 18, ../../assets/compass/sass/views/login.scss */
+/* line 17, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form .btn-register {
   background-color: white;
   color: #333;
@@ -401,7 +400,7 @@ button.btn.btn-submit {
   width: 100px;
   height: 40px;
 }
-/* line 25, ../../assets/compass/sass/views/login.scss */
+/* line 24, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form .btn-cancel {
   background-color: #333;
   color: white;
@@ -409,26 +408,26 @@ button.btn.btn-submit {
   width: 100px;
   height: 40px;
 }
-/* line 32, ../../assets/compass/sass/views/login.scss */
+/* line 31, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .container form .form-group label {
   text-align: left;
 }
-/* line 36, ../../assets/compass/sass/views/login.scss */
+/* line 35, ../../assets/compass/sass/views/login.scss */
 .login-wrapper .button-holder {
   text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 43, ../../assets/compass/sass/views/login.scss */
+  /* line 42, ../../assets/compass/sass/views/login.scss */
   .login-wrapper .container form {
     width: 80%;
     margin: auto;
   }
-  /* line 46, ../../assets/compass/sass/views/login.scss */
+  /* line 45, ../../assets/compass/sass/views/login.scss */
   .login-wrapper .container form .form-group input {
     height: 60px;
   }
-  /* line 49, ../../assets/compass/sass/views/login.scss */
+  /* line 48, ../../assets/compass/sass/views/login.scss */
   .login-wrapper .container form .btn-register, .login-wrapper .container form .btn-cancel {
     width: 150px;
     height: 80px;
@@ -925,21 +924,20 @@ html, body {
 /* line 1, ../../assets/compass/sass/views/register.scss */
 .register-wrapper {
   padding-top: 100px;
-  height: 100vh;
   padding-bottom: 136px;
   background-color: #edebe6;
   position: relative;
 }
-/* line 8, ../../assets/compass/sass/views/register.scss */
+/* line 7, ../../assets/compass/sass/views/register.scss */
 .register-wrapper h1, .register-wrapper p {
   text-align: center;
 }
-/* line 11, ../../assets/compass/sass/views/register.scss */
+/* line 10, ../../assets/compass/sass/views/register.scss */
 .register-wrapper .container form {
   margin: auto;
   width: 500px;
 }
-/* line 14, ../../assets/compass/sass/views/register.scss */
+/* line 13, ../../assets/compass/sass/views/register.scss */
 .register-wrapper .container form button {
   margin-top: 30px;
   margin-right: 5px;
@@ -947,7 +945,7 @@ html, body {
   height: 40px;
   width: 120px;
 }
-/* line 21, ../../assets/compass/sass/views/register.scss */
+/* line 20, ../../assets/compass/sass/views/register.scss */
 .register-wrapper .container form .btn-register {
   background-color: white;
   color: #333;
@@ -955,7 +953,7 @@ html, body {
   width: 100px;
   height: 40px;
 }
-/* line 28, ../../assets/compass/sass/views/register.scss */
+/* line 27, ../../assets/compass/sass/views/register.scss */
 .register-wrapper .container form .btn-cancel {
   background-color: #333;
   color: white;
@@ -963,11 +961,11 @@ html, body {
   width: 100px;
   height: 40px;
 }
-/* line 35, ../../assets/compass/sass/views/register.scss */
+/* line 34, ../../assets/compass/sass/views/register.scss */
 .register-wrapper .container form .form-group label {
   text-align: left;
 }
-/* line 39, ../../assets/compass/sass/views/register.scss */
+/* line 38, ../../assets/compass/sass/views/register.scss */
 .register-wrapper .button-holder {
   text-align: center;
   padding-bottom: 50px;
@@ -975,19 +973,15 @@ html, body {
 
 @media screen and (max-width: 1000px) {
   /* line 46, ../../assets/compass/sass/views/register.scss */
-  .register-wrapper {
-    height: 100vh;
-  }
-  /* line 48, ../../assets/compass/sass/views/register.scss */
   .register-wrapper .container form {
     width: 80%;
     margin: auto;
   }
-  /* line 51, ../../assets/compass/sass/views/register.scss */
+  /* line 49, ../../assets/compass/sass/views/register.scss */
   .register-wrapper .container form .form-group input {
     height: 60px;
   }
-  /* line 54, ../../assets/compass/sass/views/register.scss */
+  /* line 52, ../../assets/compass/sass/views/register.scss */
   .register-wrapper .container form .btn-register, .register-wrapper .container form .btn-cancel {
     width: 150px;
     height: 80px;
