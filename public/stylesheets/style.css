@@ -220,20 +220,21 @@
 }
 /* line 1, ../../assets/compass/sass/views/shipping.scss */
 #shipping {
-  margin-bottom: 186px;
+  margin-bottom: 50px;
+  min-height: 100vh;
 }
-/* line 3, ../../assets/compass/sass/views/shipping.scss */
+/* line 4, ../../assets/compass/sass/views/shipping.scss */
 #shipping #shipping-wrapper {
   margin-top: 60px;
 }
-/* line 5, ../../assets/compass/sass/views/shipping.scss */
+/* line 6, ../../assets/compass/sass/views/shipping.scss */
 #shipping #shipping-wrapper #shipping-header {
   margin: 0 0 8px;
   font-size: 32px;
   line-height: 1.2;
   text-align: left;
 }
-/* line 11, ../../assets/compass/sass/views/shipping.scss */
+/* line 12, ../../assets/compass/sass/views/shipping.scss */
 #shipping #shipping-wrapper #shipping-sub-header {
   margin: 0;
   font-size: 20px;
@@ -242,7 +243,7 @@
   text-align: left;
 }
 
-/* line 21, ../../assets/compass/sass/views/shipping.scss */
+/* line 22, ../../assets/compass/sass/views/shipping.scss */
 .shipping-block {
   border: 1px solid #d8d3c8;
   border-radius: 5px;
@@ -250,13 +251,13 @@
   padding: 30px;
 }
 
-/* line 28, ../../assets/compass/sass/views/shipping.scss */
+/* line 29, ../../assets/compass/sass/views/shipping.scss */
 .button-holder {
   clear: all;
   text-align: left;
 }
 
-/* line 33, ../../assets/compass/sass/views/shipping.scss */
+/* line 34, ../../assets/compass/sass/views/shipping.scss */
 h3.warning {
   text-align: center;
   color: red;
