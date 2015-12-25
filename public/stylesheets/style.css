@@ -291,6 +291,33 @@ h3.warning {
   color: red;
 }
 
+/* line 39, ../../assets/compass/sass/views/shipping.scss */
+.footer-wrapper2 {
+  background-color: #bfbfbf;
+  text-align: center;
+  padding-bottom: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+/* line 46, ../../assets/compass/sass/views/shipping.scss */
+.footer-wrapper2 img {
+  width: 25%;
+  height: 25%;
+  margin-top: 25px;
+}
+/* line 51, ../../assets/compass/sass/views/shipping.scss */
+.footer-wrapper2 .horizontal-rule {
+  margin: 15px 0px 15px 35%;
+  height: 1px;
+  background-color: white;
+  width: 30%;
+}
+/* line 58, ../../assets/compass/sass/views/shipping.scss */
+.footer-wrapper2 p {
+  color: #edebe6;
+}
+
 /* line 1, ../../assets/compass/sass/views/choices.scss */
 body {
   background-color: #edebe6;
