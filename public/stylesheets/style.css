@@ -19,8 +19,8 @@
 
 /* line 1, ../../assets/compass/sass/views/payment.scss */
 #payment {
-  margin-bottom: 50px;
-  min-height: 90vh;
+  margin-bottom: 186px;
+  min-height: 100%;
 }
 /* line 4, ../../assets/compass/sass/views/payment.scss */
 #payment #payment-wrapper {
@@ -103,6 +103,33 @@
   color: white;
   height: 32px;
   width: 150px;
+}
+
+/* line 77, ../../assets/compass/sass/views/payment.scss */
+.footer-wrapper {
+  background-color: #bfbfbf;
+  text-align: center;
+  padding-bottom: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+/* line 84, ../../assets/compass/sass/views/payment.scss */
+.footer-wrapper img {
+  width: 25%;
+  height: 25%;
+  margin-top: 25px;
+}
+/* line 89, ../../assets/compass/sass/views/payment.scss */
+.footer-wrapper .horizontal-rule {
+  margin: 15px 0px 15px 35%;
+  height: 1px;
+  background-color: white;
+  width: 30%;
+}
+/* line 96, ../../assets/compass/sass/views/payment.scss */
+.footer-wrapper p {
+  color: #edebe6;
 }
 
 /* line 1, ../../assets/compass/sass/views/cancellation.scss */
