@@ -7,11 +7,11 @@ Error: Undefined variable: "$cream".
 3: 	// text-align: center;
 4: 	padding-bottom: 136px;
 5: 	background-color: $cream;
-6: 	position: relative;
-7: 	h1, p{
-8: 		text-align: center;
-9: 	}
-10: 	.container form{
+6: 	h1, p{
+7: 		text-align: center;
+8: 	}
+9: 	.container form{
+10: 		margin: auto;
 
 Backtrace:
 /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/register.scss:5
@@ -66,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$cream\".\A         on line 5 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/register.scss\A \A 1: .register-wrapper{\A 2: 	padding-top: 100px;\A 3: 	// text-align: center;\A 4: 	padding-bottom: 136px;\A 5: 	background-color: $cream;\A 6: 	position: relative;\A 7: 	h1, p{\A 8: 		text-align: center;\A 9: 	}\A 10: 	.container form{"; }
+  content: "Error: Undefined variable: \"$cream\".\A         on line 5 of /Users/Stephen/Desktop/Digital Crafts/ecommerce-coffee-site/assets/compass/sass/views/register.scss\A \A 1: .register-wrapper{\A 2: 	padding-top: 100px;\A 3: 	// text-align: center;\A 4: 	padding-bottom: 136px;\A 5: 	background-color: $cream;\A 6: 	h1, p{\A 7: 		text-align: center;\A 8: 	}\A 9: 	.container form{\A 10: 		margin: auto;"; }
