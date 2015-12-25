@@ -997,7 +997,6 @@ html, body {
 }
 /* line 1, ../../assets/compass/sass/views/intro.scss */
 #intro-page-wrapper {
-  position: absolute;
   height: 100vh;
   width: 100%;
   background-color: rgba(64, 64, 64, 0.95);
@@ -1007,13 +1006,13 @@ html, body {
   color: #f2f2f2;
 }
 
-/* line 13, ../../assets/compass/sass/views/intro.scss */
+/* line 11, ../../assets/compass/sass/views/intro.scss */
 #intro-page {
   text-align: center;
   overflow: scroll;
 }
 
-/* line 18, ../../assets/compass/sass/views/intro.scss */
+/* line 16, ../../assets/compass/sass/views/intro.scss */
 #intro-page h1 {
   font-family: 'Varela Round', sans-serif;
   text-align: center;
@@ -1021,7 +1020,7 @@ html, body {
   letter-spacing: 3px;
 }
 
-/* line 25, ../../assets/compass/sass/views/intro.scss */
+/* line 23, ../../assets/compass/sass/views/intro.scss */
 #intro-page p {
   line-height: 125%;
   width: 60%;
@@ -1034,7 +1033,7 @@ html, body {
   font-weight: 300;
 }
 
-/* line 37, ../../assets/compass/sass/views/intro.scss */
+/* line 35, ../../assets/compass/sass/views/intro.scss */
 #intro-page button {
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
@@ -1050,7 +1049,7 @@ html, body {
   letter-spacing: 3px;
 }
 
-/* line 52, ../../assets/compass/sass/views/intro.scss */
+/* line 50, ../../assets/compass/sass/views/intro.scss */
 #intro-page button:hover {
   cursor: pointer;
   background-color: #ffc04d;
