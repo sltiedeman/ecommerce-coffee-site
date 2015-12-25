@@ -3,7 +3,9 @@ block content
     .navigation-bar
         .navigation-bar-left
             a(href='/')
-                img(src='./images/coolbeansLogo.png')
+                img.wide(src='./images/coolbeansLogo.png')
+            a(href='/')
+                img.narrow(src='./images/coffeeLogoStacked.png')
         .navigation-bar-right
             if (!username)
                 a(href="/login") 
@@ -82,5 +84,5 @@ block content
     .learn-more
         h3 Want to know more about us?
         a(href="/ourhistory")
-            button.ourhistory Our History
+            button.ourhistory Our Story
     extends footer

@@ -22,9 +22,14 @@ html, body{
 	.navigation-bar-left{
 		float: left;
 		width: 50%;
-		img{
+		img.wide{
 			margin-left: 60px;
 			margin-top: 20px;
+		}
+		img.narrow{
+			margin-left: 60px;
+			margin-top: 20px;
+			display: none;
 		}
 	}
 	.navigation-bar-right{
@@ -417,6 +422,24 @@ html, body{
 }
 
 @media screen and (max-width: 865px){
+	.navigation-bar{
+		.navigation-bar-left{
+			width: 25%;
+			img.wide{
+				display: none;
+			}
+			img.narrow{
+				display: inline;
+			}
+		}
+		.navigation-bar-right{
+			width: 75%;
+		}
+	}
+	.navigation-bar-small{
+		padding-left: 0%;
+		padding-right: 0%;
+	}
 	.how-it-works2 .rotated-picture{
 		img{
 			height: 150px;
