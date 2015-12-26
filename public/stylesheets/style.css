@@ -619,7 +619,7 @@ html, body {
 /* line 49, ../../assets/compass/sass/views/home.scss */
 .navigation-bar .navigation-bar-right .btn-green {
   background-color: #284741;
-  color: #333;
+  color: white;
   text-transform: uppercase;
   margin-right: 20px;
   width: 100px;
