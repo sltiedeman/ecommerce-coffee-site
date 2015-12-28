@@ -161,8 +161,8 @@
 #cancellation {
   width: 60%;
   margin: auto;
-  padding-bottom: 50px;
-  min-height: 90vh;
+  position: relative;
+  padding-bottom: 186px;
 }
 /* line 6, ../../assets/compass/sass/views/cancellation.scss */
 #cancellation #cancellation-wrapper {
@@ -177,10 +177,36 @@
   text-align: center;
 }
 
+/* line 18, ../../assets/compass/sass/views/cancellation.scss */
+.footer-wrapper2 {
+  background-color: #bfbfbf;
+  text-align: center;
+  padding-bottom: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+/* line 25, ../../assets/compass/sass/views/cancellation.scss */
+.footer-wrapper2 img {
+  max-width: 100%;
+  margin-top: 25px;
+}
+/* line 29, ../../assets/compass/sass/views/cancellation.scss */
+.footer-wrapper2 .horizontal-rule {
+  margin: 15px 0px 15px 35%;
+  height: 1px;
+  background-color: white;
+  width: 30%;
+}
+/* line 36, ../../assets/compass/sass/views/cancellation.scss */
+.footer-wrapper2 p {
+  color: #edebe6;
+}
+
 /* line 1, ../../assets/compass/sass/views/account.scss */
 #account.container {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 186px;
 }
 
 /* line 6, ../../assets/compass/sass/views/account.scss */
