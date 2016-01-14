@@ -1,26 +1,23 @@
 #intro-page-wrapper{
-	height: 100vh;
+	text-align: center;
+	overflow: scroll;
+	position: absolute;
 	width: 100%;
 	background-color: rgba(64,64,64,0.95);
-	top: 0%;
-	left: 0%;
+	top: 0px;
+	left: 0px;
 	z-index: 1000000000;
 	color: #f2f2f2;
 }
 
-#intro-page{
-	text-align: center;
-	overflow: scroll;
-}
-
-#intro-page h1{
+#intro-page-wrapper h1{
 	font-family: 'Varela Round', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 }
 
-#intro-page p{
+#intro-page-wrapper p{
 	line-height: 125%;
 	width: 60%;
 	margin: auto;
@@ -32,7 +29,7 @@
 	font-weight: 300;
 }
 
-#intro-page button{
+#intro-page-wrapper button{
 	font-family: 'Varela Round', sans-serif;
 	text-transform: uppercase;
 	text-align: center;
@@ -47,7 +44,7 @@
 	letter-spacing: 3px;
 }
 
-#intro-page button:hover{
+#intro-page-wrapper button:hover{
 	cursor: pointer;
 	background-color: #ffc04d;
 }
